@@ -3,13 +3,13 @@
 \contentsline {subsection}{\numberline {1.1}Prvn\IeC {\'\i } \IeC {\'u}kol}{5}
 \contentsline {section}{\numberline {2}Ur\IeC {\v c}en\IeC {\'\i } linearizovan\IeC {\'e}ho stavov\IeC {\'e}ho modelu}{5}
 \contentsline {subsection}{\numberline {2.1}Prom\IeC {\v e}nn\IeC {\'e} v\IeC {\'y}\IeC {\v s}ky hladin}{5}
-\contentsline {subsection}{\numberline {2.2}Druh\IeC {\'y} \IeC {\'u}kol}{5}
+\contentsline {subsection}{\numberline {2.2}Druh\IeC {\'y} \IeC {\'u}kol}{6}
 \contentsline {subsubsection}{\numberline {2.2.1}Konstantn\IeC {\'\i } pr\IeC {\r u}toky - m\IeC {\v e}n\IeC {\'\i } se hladina}{6}
 \contentsline {subsubsection}{\numberline {2.2.2}Konstantn\IeC {\'\i } hladina - m\IeC {\v e}n\IeC {\'\i } se pr\IeC {\r u}toky}{6}
-\contentsline {subsection}{\numberline {2.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol}{6}
-\contentsline {subsubsection}{\numberline {2.3.1}Ur\IeC {\v c}en\IeC {\'\i } numerick\IeC {\'e} neur\IeC {\v c}itosti}{6}
-\contentsline {subsubsection}{\numberline {2.3.2}Definovan\IeC {\'\i } modelu s pertrubacemi, nomin\IeC {\'a}ln\IeC {\'\i } model, v\IeC {\'a}hov\IeC {\'a} funkce}{6}
-\contentsline {subsection}{\numberline {2.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol}{6}
+\contentsline {subsection}{\numberline {2.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol}{7}
+\contentsline {subsubsection}{\numberline {2.3.1}Ur\IeC {\v c}en\IeC {\'\i } numerick\IeC {\'e} neur\IeC {\v c}itosti}{7}
+\contentsline {subsubsection}{\numberline {2.3.2}Definovan\IeC {\'\i } modelu s pertrubacemi, nomin\IeC {\'a}ln\IeC {\'\i } model, v\IeC {\'a}hov\IeC {\'a} funkce}{7}
+\contentsline {subsection}{\numberline {2.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol}{7}
 \contentsline {section}{\numberline {3}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } - N\IeC {\'a}vrh regul\IeC {\'a}toru}{7}
 \contentsline {subsection}{\numberline {3.1}Prvn\IeC {\'\i } \IeC {\'u}kol}{7}
 \contentsline {subsubsection}{\numberline {3.1.1}Vnit\IeC {\v r}n\IeC {\'\i } stabilita uzav\IeC {\v r}en\IeC {\'e} smy\IeC {\v c}ky (Nquistovo krit\IeC {\'e}rium)}{7}

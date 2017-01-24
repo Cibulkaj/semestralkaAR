@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
@@ -12,6 +12,7 @@
 \usepackage{float}
 \usepackage{gensymb}
 \usepackage[final]{pdfpages}
+\usepackage{a4wide}
 \renewcommand{\arraystretch}{1.5}
 %\renewcommand{\baselinestretch}{1.25}
 
@@ -102,6 +103,7 @@ S_{2}
 1.2620\cdot 10^{-4}\end{array}\right ].
 \end{equation}
 
+\newpage 
 \subsection{Druhý úkol}
 Linearizace ve dvou pracovních bodech.
 \subsubsection{Konstantní průtoky - mění se hladina}
@@ -153,7 +155,7 @@ C=
 1 & 0\\
 0 & 1\end{array}\right ].
 $$
-Parametry modelu pro zvýšený přítok $Q_{20}=Q_{10}\cdot1.2=1.8\cdot 10^{-4}m^{3}s^{-1}$
+Parametry modelu pro zvýšený přítok $Q_{20}=Q_{10}\cdot1.2=1.8\cdot 10^{-4}m^{3}s^{-1}$:
 $$A =
 \left [\begin{array}{cc}
 -0.06  & 0.06 \\
@@ -168,12 +170,22 @@ C=
 1 & 0\\
 0 & 1\end{array}\right ].
 $$
-
-
 \subsubsection{Konstantní hladina - mění se průtoky}
+V tomto případě budeme usilovat o to, aby se hladiny neměnily.
+Bude tedy platit: 
+\begin{equation}
+\left [\begin{array}{cc}
+H_{1}\left ( t \right ) \\
+H_{2}\left ( t \right )
+\end{array}\right ] = 
+\left [\begin{array}{cc}
+H_{10}\\
+H_{20}\end{array}\right ].
+\end{equation}
+Naopak budeme měnit nastavení ventilů.
 \label{sec:2B}
 \subsection{Třetí úkol}
-Přenos systému, nquist asi, oba pracovní body, neurčitost.
+Přenos systému, nyquist asi, oba pracovní body, neurčitost.
 \subsubsection{Určení numerické neurčitosti}
 \subsubsection{Definovaní modelu s pertrubacemi, nominální model, váhová funkce}
 \subsection{Čtvrtý úkol}

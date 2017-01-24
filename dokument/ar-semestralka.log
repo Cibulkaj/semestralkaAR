@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  24 JAN 2017 22:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  24 JAN 2017 23:10
 entering extended mode
 **ar-semestralka.tex
 (ar-semestralka.tex
@@ -6,8 +6,8 @@ LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -509,6 +509,12 @@ File: pppdftex.def 2016/04/13 v0.5e Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count107
 \AM@templatesizebox=\box31
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\a4wide\a4wide.sty"
+Package: a4wide 1994/08/30
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ntgclass\a4.sty"
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -538,18 +544,18 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 LaTeX Warning: Label `sec:2A' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
@@ -564,15 +570,15 @@ LaTeX Font Info:    ... okay on input line 24.
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks27
 )
-LaTeX Info: Redefining \celsius on input line 24.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 24.
+LaTeX Info: Redefining \celsius on input line 25.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 25.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 24.
-Package gensymb Info: Using \Omega for \ohm on input line 24.
+LaTeX Info: Redefining \ohm on input line 25.
+Package gensymb Info: Using \Omega for \ohm on input line 25.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -604,12 +610,12 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 * \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=54.2025pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -619,11 +625,11 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -631,7 +637,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <obrazky/fav.png, id=1, 221.82875pt x 120.45pt>
 File: obrazky/fav.png Graphic file (type png)
  <use obrazky/fav.png>
-Package pdftex.def Info: obrazky/fav.png used on input line 29.
+Package pdftex.def Info: obrazky/fav.png used on input line 30.
 (pdftex.def)             Requested size: 256.0748pt x 139.05492pt.
  [1
 
@@ -640,36 +646,36 @@ av.png>] <obrazky/Zadani1.pdf, id=10, 597.23125pt x 845.1575pt>
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani1.pdf>
-Package pdftex.def Info: obrazky/Zadani1.pdf used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf used on input line 36.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
  <use obrazky/Zadani1.pdf>
-Package pdftex.def Info: obrazky/Zadani1.pdf used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf used on input line 36.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 <obrazky/Zadani1.pdf, id=13, page=1, 597.23125pt x 845.1575pt>
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani1.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 36.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
  <use obrazky/Zadani1.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 36.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani1.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 36.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
  <use obrazky/Zadani1.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 36.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: obrazky/Zadani1.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani1.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 35.
+Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 36.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [2
 
@@ -678,44 +684,44 @@ Package pdftex.def Info: obrazky/Zadani1.pdf, page1 used on input line 35.
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani2.pdf>
-Package pdftex.def Info: obrazky/Zadani2.pdf used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf used on input line 38.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
  <use obrazky/Zadani2.pdf>
-Package pdftex.def Info: obrazky/Zadani2.pdf used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf used on input line 38.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 <obrazky/Zadani2.pdf, id=31, page=1, 597.23125pt x 845.1575pt>
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani2.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 38.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
  <use obrazky/Zadani2.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 38.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani2.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 38.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
  <use obrazky/Zadani2.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 38.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: obrazky/Zadani2.pdf Graphic file (type pdf)
 
 <use obrazky/Zadani2.pdf, page 1>
-Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 37.
+Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 38.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [3 <./obrazky/Zadani2.pdf>]
 (ar-semestralka.toc)
 \tf@toc=\write3
  [4] [5]
-Overfull \hbox (4.45206pt too wide) in paragraph at lines 178--178
-[]\T1/cmr/bx/n/12 Definovaní mo-delu s per-tru-ba-cemi, no-mi-nální mo-del, vá-
-hová funkce 
+Overfull \hbox (13.38112pt too wide) in paragraph at lines 129--131
+\T1/cmr/m/n/10.95 Pro sys-tém po-psaný rov-nicí 4[] bu-dou pa-ra-me-try li-nea-
+ri-zo-va-ného sta-vo-vého mo-delu, provedeme-
  []
 
 [6] [7] (ar-semestralka.aux)
@@ -724,30 +730,30 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5806 strings out of 493673
- 78921 string characters out of 3141530
- 167535 words of memory out of 3000000
- 9014 multiletter control sequences out of 15000+200000
- 16284 words of font info for 50 fonts, out of 3000000 for 9000
+ 5821 strings out of 493673
+ 79382 string characters out of 3141530
+ 167750 words of memory out of 3000000
+ 9021 multiletter control sequences out of 15000+200000
+ 15236 words of font info for 45 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,18n,43p,326b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbx1440.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1200.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Mirab\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Mirab\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files
+ecbx1200.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1095.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Mirab\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Mirab\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x8
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ar-semestralka.pdf (7 pages, 2984543 bytes).
+Output written on ar-semestralka.pdf (7 pages, 2981402 bytes).
 PDF statistics:
  347 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
