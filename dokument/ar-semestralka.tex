@@ -13,7 +13,7 @@
 \usepackage{gensymb}
 \usepackage[final]{pdfpages}
 \renewcommand{\arraystretch}{1.5}
-\renewcommand{\baselinestretch}{1.25}
+%\renewcommand{\baselinestretch}{1.25}
 
 \title{Automatické řízení \\
 	Semestrální práce}
@@ -39,10 +39,12 @@
 
 \tableofcontents
 \newpage
-
+\section{Řešení - Model neurčitosti}
+\subsection{První úkol}
+Výpočet ustáleného stavu.
 \section{Určení linearizovaného stavového modelu}
 \subsection{Proměnné výšky hladin}\label{sec:2A}
-Máme konstantní přítok $ Q_{1}=Q_{10}=1.5\cdot 10^{-4}m^{3}s^{-1}$, přičemž víme, že:
+Máme konstantní přítok $Q_{1}=Q_{10}=1.5\cdot 10^{-4}m^{3}s^{-1}$, přičemž víme, že:
 \begin{equation}
 \left [\begin{array}{cc}
 \frac{dV_{1}}{dt}\\
@@ -80,7 +82,7 @@ $ x_{1}(t)=H_{1}(t);\;$
 $x_{2}(t)=H_{2}(t);\;$ 
 $u(t)=Q_{1}(t)\; $
 získáme
-\begin{equation}
+\begin{equation}\label{eq:Stavove_x} 
 \left [\begin{array}{cc}
 \frac{dx_{1}}{dt} \\
 \frac{dx_{2}}{dt}
@@ -100,17 +102,61 @@ S_{2}
 1.2620\cdot 10^{-4}\end{array}\right ].
 \end{equation}
 
-
-\paragraph*{Linearizace}
-\paragraph{}
-
-\section{Řešení - Model neurčitosti}
-\subsection{První úkol}
-Výpočet ustáleného stavu.
 \subsection{Druhý úkol}
 Linearizace ve dvou pracovních bodech.
 \subsubsection{Konstantní průtoky - mění se hladina}
 \label{sec:2A}
+Nejdříve si zavedeme značení:
+\begin{equation}
+\left [\begin{array}{cc}
+y_{1}\left ( t \right ) \\
+y_{2}\left ( t \right )
+\end{array}\right ] = 
+\left [\begin{array}{cc}
+x_{1}\left ( t \right )\\
+x_{2}\left ( t \right )\end{array}\right ]=
+\left [\begin{array}{cc}
+H_{1}\left ( t \right )\\
+H_{2}\left ( t \right )\end{array}\right ].
+\end{equation}
+Chování těchto stavových proměnných je popsáno rovnicí \ref{eq:Stavove_x}. My chceme získat linearizovaný model, a to ve tvaru:
+\begin{equation}
+\dot{x}\left ( t \right )=Ax\left( t \right )+Bu \left( t \right)\end{equation}
+\begin{equation}
+y\left ( t \right )=Cx\left( t \right ).
+\end{equation}
+Parametry modelu pro konstantní přítok $Q_{1}=Q_{10}=1.5\cdot 10^{-4}m^{3}s^{-1}$:
+$$A =
+\left [\begin{array}{cc}
+-0.05  & 0.05 \\
+0.05 & -0.2
+\end{array}\right ];\;
+B= 
+\left [\begin{array}{cc}
+400\\
+0\end{array}\right ];\;
+C=
+\left [\begin{array}{cc}
+1 & 0\\
+0 & 1\end{array}\right ].
+$$
+Parametry modelu pro zvýšený přítok $Q_{20}=Q_{10}\cdot1.2=1.8\cdot 10^{-4}m^{3}s^{-1}$
+$$A =
+\left [\begin{array}{cc}
+-0.06  & 0.06 \\
+0.06 & -0.24
+\end{array}\right ];\;
+B= 
+\left [\begin{array}{cc}
+400\\
+0\end{array}\right ];\;
+C=
+\left [\begin{array}{cc}
+1 & 0\\
+0 & 1\end{array}\right ].
+$$
+
+
 \subsubsection{Konstantní hladina - mění se průtoky}
 \label{sec:2B}
 \subsection{Třetí úkol}
