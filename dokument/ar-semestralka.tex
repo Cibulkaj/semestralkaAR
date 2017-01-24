@@ -12,6 +12,7 @@
 \usepackage{float}
 \usepackage{gensymb}
 \usepackage[final]{pdfpages}
+
 \title{Automatické řízení \\
 	Semestrální práce}
 \usepackage[top=25mm, left=35mm, right=25mm, bottom=25mm]{geometry}
@@ -27,7 +28,43 @@
 \end{figure}
 \clearpage
 \newpage
-\section{Zadání}
+
+
+\includepdf{obrazky/Zadani1.pdf}
+\newpage
+\includepdf{obrazky/Zadani2.pdf}
+\newpage
+
+\section{Určení linearizovaného stavového modelu}
+\subsection{Proměnné výšky hladin}\label{sec:2A} 
+
+Daný systém popisují diferenciální rovnice:
+\begin{equation}
+\left [\begin{array}{cc}
+\frac{dH_{1}}{dt} \\
+\frac{dH_{2}}{dt}
+\end{array}\right ] = 
+\left [\begin{array}{cc}
+\frac{1}{S}\cdot Q_{1}-\frac{S_{p}C_{p}}{S}\cdot \sqrt{2g\cdot H_{2}}\\
+\frac{S_{p}C_{p}}{S}\cdot \sqrt{2g\cdot \left ( H_{1}-H_{2} \right )}-\frac{S_{2}C_{2}}{S}\cdot \sqrt{2g\cdot H_{2}}\end{array}\right ]
+\end{equation}
+Zavedením 
+$ x_{1}(t)=H_{1}(t);\;$ 
+$x_{2}(t)=H_{2}(t);\;$ 
+$u(t)=Q_{1}(t)\; $
+získáme
+\begin{equation}
+\left [\begin{array}{cc}
+\frac{dx_{1}}{dt} \\
+\frac{dx_{2}}{dt}
+\end{array}\right ] = 
+\left [\begin{array}{cc}
+\frac{1}{S}\cdot u-\frac{S_{p}C_{p}}{S}\cdot \sqrt{2g\cdot x_{2}}\\
+\frac{S_{p}C_{p}}{S}\cdot \sqrt{2g\cdot \left ( x_{1}-x_{2} \right )}-\frac{S_{2}C_{2}}{S}\cdot \sqrt{2g\cdot x_{2}}\end{array}\right ]
+\end{equation}
+
+\paragraph*{Linearizace}
+
 \section{Řešení - Model neurčitosti}
 \subsection{První úkol}
 Výpočet ustáleného stavu.
