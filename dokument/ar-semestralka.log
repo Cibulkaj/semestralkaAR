@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  24 JAN 2017 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  24 JAN 2017 22:45
 entering extended mode
 **ar-semestralka.tex
 (ar-semestralka.tex
@@ -713,7 +713,7 @@ Package pdftex.def Info: obrazky/Zadani2.pdf, page1 used on input line 37.
 (ar-semestralka.toc)
 \tf@toc=\write3
  [4] [5]
-Overfull \hbox (4.45206pt too wide) in paragraph at lines 165--165
+Overfull \hbox (4.45206pt too wide) in paragraph at lines 178--178
 []\T1/cmr/bx/n/12 Definovaní mo-delu s per-tru-ba-cemi, no-mi-nální mo-del, vá-
 hová funkce 
  []
@@ -747,9 +747,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ar-semestralka.pdf (7 pages, 2981236 bytes).
+Output written on ar-semestralka.pdf (7 pages, 2984543 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
+ 347 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

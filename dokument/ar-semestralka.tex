@@ -119,11 +119,24 @@ x_{2}\left ( t \right )\end{array}\right ]=
 H_{1}\left ( t \right )\\
 H_{2}\left ( t \right )\end{array}\right ].
 \end{equation}
-Chování těchto stavových proměnných je popsáno rovnicí \ref{eq:Stavove_x}. My chceme získat linearizovaný model, a to ve tvaru:
+Chování těchto stavových proměnných je popsáno rovnicí \ref{eq:Stavove_x}. My chceme získat linearizovaný stavový model, a to ve tvaru:
 \begin{equation}
 \dot{x}\left ( t \right )=Ax\left( t \right )+Bu \left( t \right)\end{equation}
 \begin{equation}
 y\left ( t \right )=Cx\left( t \right ).
+\end{equation}
+Pro systém popsaný rovnicí \ref{eq:Stavove_x} budou parametry  linearizovaného stavového modelu, provedeme-li klasickou linearizaci, mít následující podobu:
+\begin{equation}A = 
+\left [\begin{array}{cc}
+-\frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}} & \frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}} \\
+\frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}} & -\frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}}-\frac{C_{2}S_{2}g}{S\sqrt{\left ( 2\cdot g\cdot H_{2} \right )}}
+\end{array}\right ].
+\end{equation}
+\begin{equation}B = 
+\left [\begin{array}{cc}
+\frac{1}{S}\\
+0
+\end{array}\right ].
 \end{equation}
 Parametry modelu pro konstantní přítok $Q_{1}=Q_{10}=1.5\cdot 10^{-4}m^{3}s^{-1}$:
 $$A =
