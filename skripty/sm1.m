@@ -9,48 +9,33 @@ Cp = 0.6;
 C2 = 0.6;
 g = 9.81;
 
-%% A
-%Lineariozvaný model - S konst
-Sp = Q10/(Cp*sqrt(2*g*(H10-H20)))
-S2 = (Cp*Sp*sqrt(H10-H20))/(C2*sqrt(H20))
+%%
+%Lineariozvaný model A
+Sp = Q10/(Cp*sqrt(2*g*(H10-H20)));
+S2 = (Cp*Sp*sqrt(H10-H20))/(C2*sqrt(H20));
 
 A = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H10-H20));
-    (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2*g)/(S*sqrt(2*g*H20))]
+    (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2*g)/(S*sqrt(2*g*H20))];
 
-B = [1/S;0]
-C = eye(2)
-D = zeros(2,1)
+B = [1/S;0];
+C = eye(2); D = zeros(2,1);
 
-
-
-%% B
-%Linearizovaný model - H konst
-Q = 1*Q10;
-H2 = H10;
-H1 = H20;
-
-A2 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
-    (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2))-(C2*S2*g)/(S*sqrt(2*g*H2))];
-
-
-
-%% A
-%Linearizovaný model - Q = 1.2*Q S konst
+%%
+%Linearizovaný model - A Q = 1.2*Q, stejné nastavení pøep. ventilù
 Q = 1.2*Q10;
-Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)))
-S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20))
-
-A3 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
-    (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
-
-%% B
-%Linearizovaný model - Q = 1.2*Q H konst
 H2 = Q^2/(2*g*S2^2*C2^2);
 H1 = (Q^2/(2*g*Sp^2*Cp^2))+H2;
 
-A4 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
+A1 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
     (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2))-(C2*S2*g)/(S*sqrt(2*g*H2))];
-% 
+
+%%
+%Linearizovaný model - B Q = 1.2*Q, stejná výška hladin
+Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)))
+S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20))
+
+A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
+    (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
 %%
 %Pøenosy Q1->H2
 sys = ss(A,B,C,D);
@@ -66,53 +51,57 @@ P2 = tf(sys);
 P2 = P2(2);
 
 
-sys = ss(A3,B,C,D);
-P3 = tf(sys);
-P3 = P3(2);
-% 
-% %%
-% %Neurèitosti
-% %Pøípad a)
-% Q = 1.1*Q10;
-% H2 = Q^2/(2*g*S2^2*C2^2);
-% H1 = (Q^2/(2*g*Sp^2*Cp^2))+H2;
-% 
-% A1 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
-%     (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2))-(C2*S2*g)/(S*sqrt(2*g*H2))];
-% 
-% P0a = tf(ss(A1,B,C,D));
-% P0a = P0a(2);
-% P = P
-% P0a = P0a
-% Wa = P-P0a
-% 
-% O = nyquistoptions;
-% O.ShowFullContour = 'off'; 
-% 
-% Ps = cell(0);
-% figure; hold on; set(gca, 'box', 'on');
-% Qmod = 1:0.03:1.2;
-% for k = 1:length(Qmod)
-%     Q = Qmod(k)*Q10;
-%     H2 = Q^2/(2*g*S2^2*C2^2);
-%     H1 = (Q^2/(2*g*Sp^2*Cp^2))+H2;
-% 
-%     A1 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
-%         (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2))-(C2*S2*g)/(S*sqrt(2*g*H2))];
-%     Ps{length(Ps)+1} = tf(ss(A1,B,C,D));
-%     Ps{length(Ps)} = Ps{length(Ps)}(2);
-%     nyquist(Ps{length(Ps)}, O, 'g');
-% end
-% nyquist(P0a, 'b');
-% title('Neaurcitost pro variantu A')
-% omega = logspace(-2,1e-100,9);
-% omega = [0 omega];
-% FRP0a = squeeze(freqresp(P0a,omega));
-% FRWa = squeeze(freqresp(Wa,omega));
-% for k = 1:length(omega)
-%     circle(FRP0a(k), abs(FRWa(k)), 'r');
-% end
-% 
+O = nyquistoptions;
+O.ShowFullContour = 'off'; 
+%%Nquist
+figure
+hold on
+nyquist(P);
+nyquist(P2);
+legend('Pùvodní pøítok Q1','Zvýšený pøítok Q = 1.2*Q');
+
+%%
+%Neurèitosti
+%Pøípad a)
+Q = 1.1*Q10;
+H2 = Q^2/(2*g*S2^2*C2^2);
+H1 = (Q^2/(2*g*Sp^2*Cp^2))+H2;
+
+A1 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
+    (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2))-(C2*S2*g)/(S*sqrt(2*g*H2))];
+
+P0a = tf(ss(A1,B,C,D));
+P0a = P0a(2);
+P = P
+P0a = P0a
+Wa = P-P0a
+
+
+
+Ps = cell(0);
+figure; hold on; set(gca, 'box', 'on');
+Qmod = 1:0.03:1.2;
+for k = 1:length(Qmod)
+    Q = Qmod(k)*Q10;
+    H2 = Q^2/(2*g*S2^2*C2^2);
+    H1 = (Q^2/(2*g*Sp^2*Cp^2))+H2;
+
+    A1 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
+        (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (-Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2))-(C2*S2*g)/(S*sqrt(2*g*H2))];
+    Ps{length(Ps)+1} = tf(ss(A1,B,C,D));
+    Ps{length(Ps)} = Ps{length(Ps)}(2);
+    nyquist(Ps{length(Ps)}, O, 'g');
+end
+nyquist(P0a, 'b');
+title('Neaurcitost pro variantu A')
+omega = logspace(-2,1e-100,9);
+omega = [0 omega];
+FRP0a = squeeze(freqresp(P0a,omega));
+FRWa = squeeze(freqresp(Wa,omega));
+for k = 1:length(omega)
+    circle(FRP0a(k), abs(FRWa(k)), 'r');
+end
+
 % %Pøípad b)
 % Q = 1.1*Q10;
 % Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
