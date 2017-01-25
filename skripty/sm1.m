@@ -31,8 +31,8 @@ A1 = [-(Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2)) (Cp*Sp*sqrt(2*g))/(2*S*sqrt(H1-H2));
 
 %%
 %Linearizovaný model - B Q = 1.2*Q, stejná výška hladin
-Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)))
-S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20))
+Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
+S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20));
 
 A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
     (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
@@ -99,51 +99,60 @@ omega = [0 omega];
 FRP0a = squeeze(freqresp(P0a,omega));
 FRWa = squeeze(freqresp(Wa,omega));
 for k = 1:length(omega)
-    circle(FRP0a(k), abs(FRWa(k)), 'r');
+    circle(FRP0a(k), abs(FRWa(k)), 'm');
+%     for i=1:1
+%        plot(real(FRP0a(k)) +  real(FRWa(i)),imag(FRWa(i)) -imag(FRP0a(k)),'r*'); 
+%     end
+    
 end
 
-% %Pøípad b)
-% Q = 1.1*Q10;
-% Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
-% S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20));
-% 
-% A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
-%     (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
-% 
-% P0b = tf(ss(A2,B,C,D));
-% P=P
-% P0b = P0b(2)
-% 
-% Wb = P-P0b
-% 
-% figure; hold on; set(gca, 'box', 'on');
-% Qmod = 1:0.03:1.2;
-% for k = 1:length(Qmod)
-%     Q = Qmod(k)*Q10;
-%     Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
-%     S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20));
-%     A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
-%     (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
-%     
-%     F = tf(ss(A2,B,C,D));
-%     F = F(2);
-%     nyquist(F, O, 'g');
-% end
-% nyquist(P0b, 'b');
-% 
-% title('Neaurcitost pro variantu B')
-% FRP0b = squeeze(freqresp(P0b,omega));
-% FRWb = squeeze(freqresp(Wb,omega));
-% for k = 1:length(omega)
-%     circle(FRP0b(k), abs(FRWb(k)), 'r');
-% end
-% 
-% %Porovnání
-% figure; hold on;
-% bodemag(Wa, 'black');
-% bodemag(Wb, 'r');
-% legend('Varianta A', 'Varianta B');
-% 
+%Pøípad b)
+Q = 1.1*Q10;
+Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
+S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20));
+
+A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
+    (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
+
+P0b = tf(ss(A2,B,C,D));
+P=P
+P0b = P0b(2)
+
+Wb = P-P0b
+
+figure; hold on; set(gca, 'box', 'on');
+Qmod = 1:0.03:1.2;
+for k = 1:length(Qmod)
+    Q = Qmod(k)*Q10;
+    Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
+    S2_1 = (Cp*Sp_1*sqrt(H10-H20))/(C2*sqrt(H20));
+    A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20));
+    (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (-Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20))-(C2*S2_1*g)/(S*sqrt(2*g*H20))];
+    
+    F = tf(ss(A2,B,C,D));
+    F = F(2);
+    nyquist(F, O, 'g');
+end
+nyquist(P0b, 'b');
+
+title('Neaurcitost pro variantu B')
+FRP0b = squeeze(freqresp(P0b,omega));
+FRWb = squeeze(freqresp(Wb,omega));
+for k = 1:length(omega)
+    circle(FRP0b(k), abs(FRWb(k)), 'r');
+end
+
+%Porovnání
+figure; 
+hold on;
+grid on;
+bodemag(Wa, 'b');
+bodemag(Wb, 'g');
+legend('varianta A', 'varianta B');
+title('Porovnání obou variant v Bodeho charakteristice.');
+grid on;
+
+
 % %Porovnání
 % Ra = zeros(1,length(omega));
 % for k = 1:length(Ra)
