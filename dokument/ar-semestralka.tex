@@ -262,7 +262,7 @@ jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku
 \end{figure}
 
 \newpage 
-\subsubsection{Určení numerické neurčitosti}
+\subsubsection{Numerické určení neurčitosti}
 Nyní budeme uvažovat, že máme množinový model, ve kterém jsou všechny přenosy $ P $, které vznikly z nominálního přenosu $ P_{0} $ aditivní perturbací:
 \begin{equation}\label{eq:Aditivni_neurcitost-zakladni_vztah} 
 P = P_{0}+W_{a}\Delta,
@@ -326,8 +326,33 @@ Porovnání neurčitostí pro oba případy provedeme vykreslením příslušný
 
 \newpage
 \section{Řešení - Návrh regulátoru}
-\subsection{První úkol}
-Parametry PI regulatoru. Nejsem si jistej jestli tady jde o subukoly nebo jenom podminky pro jeden ukol.
+V následující čísti budeme předpokládat, že přítok $ Q_{1}\left ( t \right ) $ již není konstantní, ale je realizován vodním čerpadlem, jehož chování budeme aproximovat systémem prvního řádu s časovou konstantou $ T=0.5s $ a statickým zesílením $ K = Q_{10} $. 
+
+Přenosová funkce od napětí na kotvě stejnosměrného motoru má tedy tvar:
+\begin{equation}\label{eq:Prenos_motoru} 
+F_{c}\left ( s \right )=\frac{Q_{10}}{1+0.5s}.
+\end{equation}
+
+Jelikož se budeme dle zadání snažit pomocí PI regilátoru (viz kapitola \ref{sec:PI}) řídit výšku hladiny $ H_{2} $, vybereme přenos systému z kapitoly \ref{sec:2A}, kde uvažujeme variantu A, tedy měnící se hladiny. Použijeme tudíž přenos systému xxx-číslo-xxx a se zahrnutím přenosu motoru čerpadla (viz \ref{eq:Prenos_motoru}) získáme přenos soustavy ve tvaru:
+\begin{equation}\label{eq:Prenos_soustavy_s_motorem} 
+P_{S}\left ( s \right )=F_{c}\left ( s \right )\cdot P_{neco}\left ( s \right )=\frac{Q_{10}xxxxxxxx}{1+0.5sxxxxxxxxxxxx}.
+\end{equation}
+
+\subsection{První úkol - návrh parametrů PI regulatoru}\label{sec:PI} 
+Dále budeme uvažovat, že napětí na kotvě motoru čerpadla je řízeno pomocí PI regulátoru za účelem řídit výšku hladiny $ H_{2} $. Ještě poznamenejme, že  dle podmínek uvedených v zadání můžeme systém považovat za lineární. Přenos PI regulátoru bude mít tvar:
+\begin{equation}\label{eq:Prenos_regulatoru} 
+C\left ( s \right )=K\cdot \left ( 1+\frac{1}{T_{i}s} \right ).
+\end{equation}
+Úkolem je navrhnout parametry PI regulátoru tak, aby byly splněny návrhové požadavky pro všechny systémy z modelu neurčitosti pro variantu A, tedy pro měnící se výšky hladin. Tím je myšleno, že požadavky budou platit pro libovolný pracovní bod, který se nechází mezi původním pracovním bodem a pracovním bodem při zvýšením přítoku, tedy pro takový přítok $ Q $, který splňuje podmínku \ref{eq:Q_omezeni}. V další části se tedy budeme zabývat návrhovými požadavky.
+
+
+
+
+
+
+
+
+Nejsem si jistej jestli tady jde o subukoly nebo jenom podminky pro jeden ukol.
 \subsubsection{Vnitřní stabilita uzavřené smyčky (Nquistovo kritérium)}
 \subsubsection{Robustnost ve stabilitě}
 \subsubsection{Podmínka útlumu komplementrání citlivostní funkce}
