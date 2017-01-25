@@ -235,11 +235,12 @@ P_{1}\left ( s \right ) =\frac{20}{s^{2} + 0.25 s + 0.0075}
 \begin{equation}\label{eq:P-A2} 
 P_{2}\left ( s \right ) =\frac{16.67}{s^{2} + 0.2083  s + 0.005208},
 \end{equation}
-jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku\ref{fig:nyquist-A}.
+jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku \ref{fig:nyquist-A}.
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/nyquistA.eps}
 	\end{center}
+	\caption{Nyquistova frekvenční charakteristika pro dané přenosy.}
 	\label{fig:nyquist-A}
 \end{figure}
 
@@ -251,11 +252,12 @@ P_{1}\left ( s \right ) =\frac{20}{s^{2} + 0.25 s + 0.0075}
 \begin{equation}\label{eq:P-B2} 
 P_{2}\left ( s \right ) =\frac{24}{s^{2} + 0.3  s + 0.0108},
 \end{equation}
-jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku\ref{fig:nyquist-B}.
+jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku \ref{fig:nyquist-B}.
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/nyquistB.eps}
 	\end{center}
+	\caption{Nyquistova frekvenční charakteristika pro dané přenosy.}
 	\label{fig:nyquist-B}
 \end{figure}
 
@@ -269,14 +271,32 @@ kde $ \left\| \Delta   \right \|_{_{\infty }}< 1 $ a $ W_{a}\left ( s \right ) $
 \begin{equation}\label{eq:Vahova_fce_aditvni} 
 W_{a}\left ( s \right ) = P_{0}\left ( s \right )-P\left ( s \right ),
 \end{equation}
-kde za $ P\left ( s \right ) $ budeme dosazovat přenosy spočtené výše, tedy výsledky \ref{eq:P-A1}, \ref{eq:P-A2}, \ref{eq:P-B1} a \ref{eq:P-B2}. Nejprve se tedy zabývejme přenosy týkající se varianty A, tedy přenosy $ P_{1}\left ( s \right ) $ pro $ Q_{10} $ (viz \ref{eq:P-A1}) a $ P_{1}\left ( s \right ) $ pro $ 1.2\cdot Q_{10} $ (viz \ref{eq:P-A2}) , které jsme spočetli výše. Dále předpokládáme, že pracovní bod se nachází libovolně mezi těmito dvěma pracovními body, lišící se v přítoku $ Q $. Je zřejmé, že nominální model bude vhodné určit pro pracovní bod ležící zhruba uprostřed tohoto intervalu, tedy pro konstantní přítok $ 1.1\cdot Q_{10} $. Při jeho určení budeme postupovat stejně jako během určování $ P_{1}\left ( s \right ) $ a $ P_{2}\left ( s \right ) $. Nominální přenos bude mít tvar:
-\begin{equation}\label{eq:P-B1} 
+kde za $ P\left ( s \right ) $ budeme dosazovat přenosy spočtené výše, tedy výsledky \ref{eq:P-A1}, \ref{eq:P-A2}, \ref{eq:P-B1} a \ref{eq:P-B2}. Nejprve se tedy zabývejme přenosy týkající se varianty A, tedy přenosy $ P_{1}\left ( s \right ) $ pro $ Q_{10} $ (viz \ref{eq:P-A1}) a $ P_{1}\left ( s \right ) $ pro $ 1.2\cdot Q_{10} $ (viz \ref{eq:P-A2}) , které jsme spočetli výše. Dále předpokládáme, že pracovní bod se nachází libovolně mezi těmito dvěma pracovními body, lišící se v přítoku $ Q $. Je zřejmé, že nominální model bude vhodné určit pro pracovní bod ležící zhruba uprostřed tohoto intervalu, tedy pro konstantní přítok $ 1.1\cdot Q_{10} $. Při jeho určení budeme postupovat stejně jako během určování $ P_{1}\left ( s \right ) $ a $ P_{2}\left ( s \right ) $. Nominální přenos tedy bude mít tvar:
+\begin{equation}\label{eq:P-A0} 
 P_{0}\left ( s \right ) =\frac{18.18}{s^{2} + 0.2273 s + 0.006198}.
 \end{equation}
 Váhovou funkci pro námi zvolenou aditivní neurčitost spočteme ze vztahu \ref{eq:Vahova_fce_aditvni}:   
+\begin{equation}\label{eq:Wa-A}
+Wa = \frac{1.818 s^{2} + 8.882\cdot 10^{-16}s - 0.0124}{s^{4} + 0.4773 s^{3} + 0.07052 s^{2} + 0.003254 s + 4.649\cdot 10^{-5}}.
+\end{equation} 
+Zajímavé bude zejména grafické znázornění neurčitosti. To provedeme pro různé kombinace přenosových funkcí, které odpovídají systému za předpokladu různých velikostí konstantních přítoků, přičemž zavedeme omezení: 
+\begin{equation}
+\label{eq:Q_omezeni} 
+Q_{10} \leq Q_{1} \leq 1.2\cdot Q_{10}, 
+\end{equation}
+z nichž jednomu bude odpovídat námi zvolení nominální model $ P_{0} $. Zobrazení k komplexní rovině je ke shlédnutí na obrázku.
 
+S přenosy $ P_{1}\left ( s \right ) $ a $ P_{2}\left ( s \right ) $ týkajícími se varianty B (viz tvary přenosů \ref{eq:P-B1} a \ref{eq:P-B2}) budeme pracovat stejně. V tomto případě bude mít nominální přenos tvar:
+\begin{equation}\label{eq:P-B0} 
+P_{0}\left ( s \right ) =\frac{22}{s^{2} + 0.275 s + 0.009075},
+\end{equation}
+načež dále opět využijeme vztahu \ref{eq:Vahova_fce_aditvni} k určení váhové funkce:
+\begin{equation}\label{eq:Wa-B}
+Wa = \frac{-2s^{2} + 8.882\cdot 10^{-16}s - 0.0165}{s^{4} + 0.525 s^{3} + 0.08532 s^{2} + 0.004331 s + 6.806\cdot 10^{-5}}.
+\end{equation}
+Grafické znázornění provedeme rovněž stejně jako v předchozím bodě za respektování omezení \ref{eq:Q_omezeni}.
 \subsubsection{Definovaní modelu s pertrubacemi, nominální model, váhová funkce}
-\subsection{Čtvrtý úkol}
+\subsection{Čtvrtý úkol - Porovnání velikostí neurčitostí}
 Porovnání neurčitostí z \ref{sec:2A} a \ref{sec:2B}.
 
 
