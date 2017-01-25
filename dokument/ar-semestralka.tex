@@ -111,7 +111,7 @@ S_{2}
 \end{equation}
 
 \newpage 
-\subsection{Druhý úkol - linearizace ve dvou pracovních bodech}
+\subsection{Druhý úkol - linearizace ve dvou pracovních bodech}\label{sec:2}
 \subsubsection{Konstantní průtoky - mění se hladina}
 \label{sec:2A}
 Nejdříve si zavedeme značení:
@@ -176,7 +176,7 @@ C=
 1 & 0\\
 0 & 1\end{array}\right ].
 $$
-\subsubsection{Konstantní hladina - mění se průtoky}
+\subsubsection{Konstantní hladina - mění se průtoky}\label{sec:2B}
 V tomto případě budeme usilovat o to, aby se hladiny neměnily.
 Bude tedy platit: 
 \begin{equation}
@@ -214,9 +214,25 @@ C=
 0 & 1\end{array}\right ].
 $$
 
-\label{sec:2B}
-\subsection{Třetí úkol}
-P
+
+\subsection{Třetí úkol}\label{sec:3}
+Nyní nás zajímá přenos systému $ Q_{1}\left ( t \right )\rightarrow H_{2}\left ( t \right ) $. Je tedy zřejmé, že měříme pouze veličinu $ H_{2}\left ( t \right ) $. Matici $ C $ stavového popisu
+\begin{equation}
+\dot{x}\left ( t \right )=Ax\left( t \right )+Bu \left( t \right)\end{equation}
+\begin{equation}
+y\left ( t \right )=Cx\left( t \right )
+\end{equation}
+budeme nyní uvažovat jako: $$C=\left [\begin{array}{cc}0 & 1\end{array}\right ].
+$$
+Přenos systému poté určíme ze stavové rovnice linearizovaného modelu pomocí známého vztahu:
+\begin{equation}\label{stav_popis} 
+P\left ( s \right )=C\cdot \left ( sI-A \right )^{-1}\cdot B.
+\end{equation}
+V kapitolách \ref{sec:2A} a \ref{sec:2B} jsme získali tři různé stavové reprezentace pro různé situace, jako jsou různá nastavení ventilů a přítoků. Nejdříve 
+
+
+
+
 Přenos systému, nyquist asi, oba pracovní body, neurčitost.
 \subsubsection{Určení numerické neurčitosti}
 \subsubsection{Definovaní modelu s pertrubacemi, nominální model, váhová funkce}
