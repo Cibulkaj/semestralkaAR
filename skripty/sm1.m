@@ -40,25 +40,25 @@ A2 = [-(Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10-H20)) (Cp*Sp_1*sqrt(2*g))/(2*S*sqrt(H10
 %Pøenosy Q1->H2
 sys = ss(A,B,C,D);
 P = tf(sys);
-P = P(2);
+P = P(2)
 
 sys = ss(A1,B,C,D);
 P1 = tf(sys);
-P1 = P1(2);
+P1 = P1(2)
 
 sys = ss(A2,B,C,D);
 P2 = tf(sys);
-P2 = P2(2);
+P2 = P2(2)
 
 
 O = nyquistoptions;
 O.ShowFullContour = 'off'; 
-%%Nquist
-figure
-hold on
-nyquist(P);
-nyquist(P2);
-legend('Pùvodní pøítok Q1','Zvýšený pøítok Q = 1.2*Q');
+% %%Nquist
+% figure
+% hold on
+% nyquist(P);
+% nyquist(P2);
+% legend('Pùvodní pøítok Q1','Zvýšený pøítok Q = 1.2*Q');
 
 %%
 %Neurèitosti
