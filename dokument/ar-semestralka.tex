@@ -214,8 +214,8 @@ C=
 0 & 1\end{array}\right ].
 $$
 
-
-\subsection{Třetí úkol}\label{sec:3}
+\newpage 
+\subsection{Třetí úkol - určení přenosu systému}\label{sec:3}
 Nyní nás zajímá přenos systému $ Q_{1}\left ( t \right )\rightarrow H_{2}\left ( t \right ) $. Je tedy zřejmé, že měříme pouze veličinu $ H_{2}\left ( t \right ) $. Matici $ C $ stavového popisu
 \begin{equation}
 \dot{x}\left ( t \right )=Ax\left( t \right )+Bu \left( t \right)\end{equation}
@@ -225,19 +225,62 @@ y\left ( t \right )=Cx\left( t \right )
 budeme nyní uvažovat jako: $$C=\left [\begin{array}{cc}0 & 1\end{array}\right ].
 $$
 Přenos systému poté určíme ze stavové rovnice linearizovaného modelu pomocí známého vztahu:
-\begin{equation}\label{stav_popis} 
+\begin{equation}\label{eq:stav_popis} 
 P\left ( s \right )=C\cdot \left ( sI-A \right )^{-1}\cdot B.
 \end{equation}
-V kapitolách \ref{sec:2A} a \ref{sec:2B} jsme získali tři různé stavové reprezentace pro různé situace, jako jsou různá nastavení ventilů a přítoků. Nejdříve 
+V kapitolách \ref{sec:2A} a \ref{sec:2B} jsme získali tři různé stavové reprezentace pro různé situace, jako jsou různá nastavení ventilů a přítoků. Nejdříve spočteme přenosy pro systém popsaný v kapitole \ref{sec:2A}, tedy pro přítok $ Q_{10} $ ($ P_{1}\left ( s \right )  $) a pro jeho zvýšenou variantu ($ P_{2}\left ( s \right )  $):
+\begin{equation}\label{eq:P-A1} 
+P_{1}\left ( s \right ) =\frac{20}{s^{2} + 0.25 s + 0.0075}
+\end{equation}
+\begin{equation}\label{eq:P-A2} 
+P_{2}\left ( s \right ) =\frac{16.67}{s^{2} + 0.2083  s + 0.005208},
+\end{equation}
+jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku\ref{fig:nyquist-A}.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/nyquistA.eps}
+	\end{center}
+	\label{fig:nyquist-A}
+\end{figure}
 
+\newpage 
+Pro získání přenosů pro systém popsaný v kapitole \ref{sec:2B} budeme postupovat stejně a získáme znovu dva přenosy pro pro přítok $ Q_{10} $ ($ P_{1}\left ( s \right )  $) a pro jeho zvýšenou variantu ($ P_{2}\left ( s \right )  $):
+\begin{equation}\label{eq:P-B1} 
+P_{1}\left ( s \right ) =\frac{20}{s^{2} + 0.25 s + 0.0075}
+\end{equation}
+\begin{equation}\label{eq:P-B2} 
+P_{2}\left ( s \right ) =\frac{24}{s^{2} + 0.3  s + 0.0108},
+\end{equation}
+jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku\ref{fig:nyquist-B}.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/nyquistB.eps}
+	\end{center}
+	\label{fig:nyquist-B}
+\end{figure}
 
-
-
-Přenos systému, nyquist asi, oba pracovní body, neurčitost.
+\newpage 
 \subsubsection{Určení numerické neurčitosti}
+Nyní budeme uvažovat, že máme množinový model, ve kterém jsou všechny přenosy $ P $, které vznikly z nominálního přenosu $ P_{0} $ aditivní perturbací:
+\begin{equation}\label{eq:Aditivni_neurcitost-zakladni_vztah} 
+P = P_{0}+W_{a}\Delta,
+\end{equation}
+kde $ \left\| \Delta   \right \|_{_{\infty }}< 1 $ a $ W_{a}\left ( s \right ) $ je pevně daná přenosová funkce. Tu můžeme vyjádřit následujícím způsobem:
+\begin{equation}\label{eq:Vahova_fce_aditvni} 
+W_{a}\left ( s \right ) = P_{0}\left ( s \right )-P\left ( s \right ),
+\end{equation}
+kde za $ P\left ( s \right ) $ budeme dosazovat přenosy spočtené výše, tedy výsledky \ref{eq:P-A1}, \ref{eq:P-A2}, \ref{eq:P-B1} a \ref{eq:P-B2}. Nejprve se tedy zabývejme přenosy týkající se varianty A, tedy přenosy $ P_{1}\left ( s \right ) $ pro $ Q_{10} $ (viz \ref{eq:P-A1}) a $ P_{1}\left ( s \right ) $ pro $ 1.2\cdot Q_{10} $ (viz \ref{eq:P-A2}) , které jsme spočetli výše. Dále předpokládáme, že pracovní bod se nachází libovolně mezi těmito dvěma pracovními body, lišící se v přítoku $ Q $. Je zřejmé, že nominální model bude vhodné určit pro pracovní bod ležící zhruba uprostřed tohoto intervalu, tedy pro konstantní přítok $ 1.1\cdot Q_{10} $. Při jeho určení budeme postupovat stejně jako během určování $ P_{1}\left ( s \right ) $ a $ P_{2}\left ( s \right ) $. Nominální přenos bude mít tvar:
+\begin{equation}\label{eq:P-B1} 
+P_{0}\left ( s \right ) =\frac{18.18}{s^{2} + 0.2273 s + 0.006198}.
+\end{equation}
+Váhovou funkci pro námi zvolenou aditivní neurčitost spočteme ze vztahu \ref{eq:Vahova_fce_aditvni}:   
+
 \subsubsection{Definovaní modelu s pertrubacemi, nominální model, váhová funkce}
 \subsection{Čtvrtý úkol}
 Porovnání neurčitostí z \ref{sec:2A} a \ref{sec:2B}.
+
+
+\newpage 
 \section{Řešení - Návrh regulátoru}
 \subsection{První úkol}
 Parametry PI regulatoru. Nejsem si jistej jestli tady jde o subukoly nebo jenom podminky pro jeden ukol.
