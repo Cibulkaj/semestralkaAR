@@ -41,10 +41,7 @@
 \tableofcontents
 \newpage
 \section{Řešení - Model neurčitosti}
-\subsection{První úkol}
-Výpočet ustáleného stavu.
-\section{Určení linearizovaného stavového modelu}
-\subsection{Proměnné výšky hladin}\label{sec:2A}
+\subsection{První úkol - výpočet nastavení ventilů}
 Máme konstantní přítok $Q_{1}=Q_{10}=1.5\cdot 10^{-4}m^{3}s^{-1}$, přičemž víme, že:
 \begin{equation}
 \left [\begin{array}{cc}
@@ -93,7 +90,17 @@ získáme
 \frac{S_{p}C_{p}}{S}\cdot \sqrt{2g\cdot \left ( x_{1}-x_{2} \right )}-\frac{S_{2}C_{2}}{S}\cdot \sqrt{2g\cdot x_{2}}\end{array}\right ].
 \end{equation}
 Za předpokladu neměnících se hladin $H_{1}$ a $ H_{2} $ budou obě derivace nulové. Položíme je tedy nulou a díky tomu získáme požadované nastavení přepouštěcího ventilu $S_{p}$ a výtokového ventilu $S_{2}$:
-\begin{equation}
+\begin{equation}\label{eq:vypocet_ventilu}
+\left [\begin{array}{cc}
+S_{p} \\
+S_{2}
+\end{array}\right ] = 
+\left [\begin{array}{cc}
+\frac{Q_{10}}{C_{p}\cdot \sqrt{2g\left ( H_{1}-H_{2} \right )}}\\
+\frac{C_{p} S_{p}\sqrt{\left ( H_{1}-H_{2} \right )}}{C_{2} \sqrt{H_{2}}}\end{array}\right ],
+\end{equation}
+kde po dosazení získáme:
+\begin{equation}\label{eq:nastaveni_ventilu_10}
 \left [\begin{array}{cc}
 S_{p} \\
 S_{2}
@@ -104,8 +111,7 @@ S_{2}
 \end{equation}
 
 \newpage 
-\subsection{Druhý úkol}
-Linearizace ve dvou pracovních bodech.
+\subsection{Druhý úkol - linearizace ve dvou pracovních bodech}
 \subsubsection{Konstantní průtoky - mění se hladina}
 \label{sec:2A}
 Nejdříve si zavedeme značení:
@@ -128,7 +134,7 @@ Chování těchto stavových proměnných je popsáno rovnicí \ref{eq:Stavove_x
 y\left ( t \right )=Cx\left( t \right ).
 \end{equation}
 Pro systém popsaný rovnicí \ref{eq:Stavove_x} budou parametry  linearizovaného stavového modelu, provedeme-li klasickou linearizaci, mít následující podobu:
-\begin{equation}A = 
+\begin{equation}\label{eq:linearizace_zakladni_vztah}A = 
 \left [\begin{array}{cc}
 -\frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}} & \frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}} \\
 \frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}} & -\frac{C_{p}S_{p}\sqrt{2g}}{2\cdot S\sqrt{\left ( H_{1}-H_{2} \right )}}-\frac{C_{2}S_{2}g}{S\sqrt{\left ( 2\cdot g\cdot H_{2} \right )}}
@@ -158,8 +164,8 @@ $$
 Parametry modelu pro zvýšený přítok $Q_{20}=Q_{10}\cdot1.2=1.8\cdot 10^{-4}m^{3}s^{-1}$:
 $$A =
 \left [\begin{array}{cc}
--0.06  & 0.06 \\
-0.06 & -0.24
+-0.0417  & 0.0417 \\
+0.0417 & -0.1667
 \end{array}\right ];\;
 B= 
 \left [\begin{array}{cc}
@@ -182,9 +188,35 @@ H_{2}\left ( t \right )
 H_{10}\\
 H_{20}\end{array}\right ].
 \end{equation}
-Naopak budeme měnit nastavení ventilů.
+Naopak budeme měnit nastavení ventilů. Takovéto nastavení jsme pro konstantní přítok $ Q_{10} $ již spočetli, viz výsledek \ref{eq:nastaveni_ventilu_10}. Aby byla výška hladin konstantní i při přítoku $ 1.2 \cdot Q_{10} $, budeme muset nastavení ventilů přepočítat pomocí vztahu \ref{eq:vypocet_ventilu}, čímž získáme následující výsledné nastavení:
+\begin{equation}\label{eq:nastaveni_ventilu_20}
+\left [\begin{array}{cc}
+S_{p} \\
+S_{2}
+\end{array}\right ] = 
+\left [\begin{array}{cc}
+8.7437\cdot 10^{-5}\\
+1.5145\cdot 10^{-4}\end{array}\right ].
+\end{equation}
+K získání linearizovaného stavového modelu v tomto pracovním bodě využijeme zavedeného vztahu \ref{eq:linearizace_zakladni_vztah}. Jeho parametry budou vypadat následovně:
+$$A =
+\left [\begin{array}{cc}
+-0.06  & 0.06 \\
+0.06 & -0.24
+\end{array}\right ];\;
+B= 
+\left [\begin{array}{cc}
+400\\
+0\end{array}\right ];\;
+C=
+\left [\begin{array}{cc}
+1 & 0\\
+0 & 1\end{array}\right ].
+$$
+
 \label{sec:2B}
 \subsection{Třetí úkol}
+P
 Přenos systému, nyquist asi, oba pracovní body, neurčitost.
 \subsubsection{Určení numerické neurčitosti}
 \subsubsection{Definovaní modelu s pertrubacemi, nominální model, váhová funkce}
