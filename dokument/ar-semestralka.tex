@@ -239,9 +239,9 @@ jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/nyquistA.eps}
-	\end{center}
 	\caption{Nyquistova frekvenční charakteristika pro dané přenosy.}
 	\label{fig:nyquist-A}
+	\end{center}
 \end{figure}
 
 \newpage 
@@ -256,9 +256,9 @@ jejichž znázornění v komplexní rovině si můžeme prohlédnout na obrázku
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/nyquistB.eps}
-	\end{center}
 	\caption{Nyquistova frekvenční charakteristika pro dané přenosy.}
 	\label{fig:nyquist-B}
+	\end{center}
 \end{figure}
 
 \newpage 
@@ -284,7 +284,14 @@ Zajímavé bude zejména grafické znázornění neurčitosti. To provedeme pro 
 \label{eq:Q_omezeni} 
 Q_{10} \leq Q_{1} \leq 1.2\cdot Q_{10}, 
 \end{equation}
-z nichž jednomu bude odpovídat námi zvolení nominální model $ P_{0} $. Zobrazení k komplexní rovině je ke shlédnutí na obrázku.
+z nichž jednomu bude odpovídat námi zvolení nominální model $ P_{0} $. Zobrazení k komplexní rovině je ke shlédnutí na obrázku \ref{fig:neurcitost-A}.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/neurcitostA.eps}
+	%\caption{}
+	\label{fig:neurcitost-A}
+	\end{center}
+\end{figure}
 
 S přenosy $ P_{1}\left ( s \right ) $ a $ P_{2}\left ( s \right ) $ týkajícími se varianty B (viz tvary přenosů \ref{eq:P-B1} a \ref{eq:P-B2}) budeme pracovat stejně. V tomto případě bude mít nominální přenos tvar:
 \begin{equation}\label{eq:P-B0} 
@@ -294,13 +301,30 @@ načež dále opět využijeme vztahu \ref{eq:Vahova_fce_aditvni} k určení vá
 \begin{equation}\label{eq:Wa-B}
 Wa = \frac{-2s^{2} + 8.882\cdot 10^{-16}s - 0.0165}{s^{4} + 0.525 s^{3} + 0.08532 s^{2} + 0.004331 s + 6.806\cdot 10^{-5}}.
 \end{equation}
-Grafické znázornění provedeme rovněž stejně jako v předchozím bodě za respektování omezení \ref{eq:Q_omezeni}.
-\subsubsection{Definovaní modelu s pertrubacemi, nominální model, váhová funkce}
+Grafické znázornění provedeme rovněž stejně jako v předchozím bodě za respektování omezení \ref{eq:Q_omezeni}. Znázornění je možno vidět na obrázku \ref{fig:neurcitost-B}.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/neurcitostB.eps}
+	%\caption{}
+	\label{fig:neurcitost-B}
+	\end{center}
+\end{figure}
+
+\newpage
+Na obrázcích \ref{fig:neurcitost-A} a \ref{fig:neurcitost-B} si všimněme, že je zde vykresleno několik zelených křivek pro přenosové funkce za předpokladu různých, na intervalu \ref{eq:Q_omezeni} vhodně rozmístěných, konstantních přítoků. Modrá křivka představuje náš nominální model $ P_{0} $. V případě aditivní perturbace se velikost neurčitosti rovná $ \left | W_{a} \right | $, která určuje poloměr kružnic, které mají střed na křivce značící nominální přenos. na orázcích jich vidíme hned několik, a to pro vhodně zvolené frekvence $ \omega $.
+
 \subsection{Čtvrtý úkol - Porovnání velikostí neurčitostí}
-Porovnání neurčitostí z \ref{sec:2A} a \ref{sec:2B}.
+Porovnání neurčitostí pro oba případy provedeme vykreslením příslušných Bodeho frekvenčních charakteristik, kde pozorujeme nepatrné rozdíly, viz obrázek \ref{fig:porovnani_neurcitosti}.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/porovnaniNeurcitosti.eps}
+	%\caption{}
+	\label{fig:porovnani_neurcitosti}
+	\end{center}
+\end{figure}
 
 
-\newpage 
+\newpage
 \section{Řešení - Návrh regulátoru}
 \subsection{První úkol}
 Parametry PI regulatoru. Nejsem si jistej jestli tady jde o subukoly nebo jenom podminky pro jeden ukol.

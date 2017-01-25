@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  25 JAN 2017 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  25 JAN 2017 18:26
 entering extended mode
 **ar-semestralka.tex
 (ar-semestralka.tex
@@ -759,36 +759,95 @@ File: obrazky/nyquistB-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: obrazky/nyquistB-eps-converted-to.pdf used on input li
 ne 258.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [9 <./obrazky/nyquistB-eps-converted-to.pdf>] [10] [11] (ar-semestralka.aux) )
- 
+ [9 <./obrazky/nyquistB-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <obrazky/neurcitostA.eps>
+(epstopdf)                    date: 2017-01-25 17:40:40
+(epstopdf)                    size: 817185 bytes
+(epstopdf)             Output file: <obrazky/neurcitostA-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-01-25 17:43:32
+(epstopdf)                    size: 62005 bytes
+(epstopdf)             Command: <epstopdf --outfile=obrazky/neurcitostA-eps-con
+verted-to.pdf obrazky/neurcitostA.eps>
+(epstopdf)             \includegraphics on input line 290.
+Package epstopdf Info: Output file is already uptodate.
+
+<obrazky/neurcitostA-eps-converted-to.pdf, id=87, 421.575pt x 316.18124pt>
+File: obrazky/neurcitostA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use obrazky/neurcitostA-eps-converted-to.pdf>
+Package pdftex.def Info: obrazky/neurcitostA-eps-converted-to.pdf used on input
+ line 290.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <obrazky/neurcitostB.eps>
+(epstopdf)                    date: 2017-01-25 17:40:40
+(epstopdf)                    size: 806770 bytes
+(epstopdf)             Output file: <obrazky/neurcitostB-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-01-25 17:43:33
+(epstopdf)                    size: 61618 bytes
+(epstopdf)             Command: <epstopdf --outfile=obrazky/neurcitostB-eps-con
+verted-to.pdf obrazky/neurcitostB.eps>
+(epstopdf)             \includegraphics on input line 307.
+Package epstopdf Info: Output file is already uptodate.
+
+<obrazky/neurcitostB-eps-converted-to.pdf, id=88, 421.575pt x 316.18124pt>
+File: obrazky/neurcitostB-eps-converted-to.pdf Graphic file (type pdf)
+
+<use obrazky/neurcitostB-eps-converted-to.pdf>
+Package pdftex.def Info: obrazky/neurcitostB-eps-converted-to.pdf used on input
+ line 307.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+ [10] [11 <./obrazky/neurcitostA-eps-converted-to.pdf> <./obrazky/neurcitostB-e
+ps-converted-to.pdf>]
+Package epstopdf Info: Source file: <obrazky/porovnaniNeurcitosti.eps>
+(epstopdf)                    date: 2017-01-25 17:40:40
+(epstopdf)                    size: 31541 bytes
+(epstopdf)             Output file: <obrazky/porovnaniNeurcitosti-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-01-25 17:48:06
+(epstopdf)                    size: 5577 bytes
+(epstopdf)             Command: <epstopdf --outfile=obrazky/porovnaniNeurcitost
+i-eps-converted-to.pdf obrazky/porovnaniNeurcitosti.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
+
+<obrazky/porovnaniNeurcitosti-eps-converted-to.pdf, id=102, 421.575pt x 316.181
+24pt>
+File: obrazky/porovnaniNeurcitosti-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use obrazky/porovnaniNeurcitosti-eps-converted-to.pdf>
+Package pdftex.def Info: obrazky/porovnaniNeurcitosti-eps-converted-to.pdf used
+ on input line 320.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+ [12 <./obrazky/porovnaniNeurcitosti-eps-converted-to.pdf>] [13] (ar-semestralk
+a.aux) ) 
 Here is how much of TeX's memory you used:
- 5853 strings out of 493673
- 80067 string characters out of 3141530
- 168896 words of memory out of 3000000
- 9050 multiletter control sequences out of 15000+200000
+ 5871 strings out of 493673
+ 80757 string characters out of 3141530
+ 168933 words of memory out of 3000000
+ 9065 multiletter control sequences out of 15000+200000
  15236 words of font info for 45 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,18n,43p,903b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
-bx1200.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecbx1095.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecbx1440.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Mirab\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ar-semestralka.pdf (11 pages, 3028470 bytes).
+ <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\ecbx1200.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecbx1095.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Mirab\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Mirab\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Mirab\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on ar-semestralka.pdf (13 pages, 3153036 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
+ 396 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
