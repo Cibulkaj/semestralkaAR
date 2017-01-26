@@ -333,9 +333,9 @@ Přenosová funkce od napětí na kotvě stejnosměrného motoru má tedy tvar:
 F_{c}\left ( s \right )=\frac{Q_{10}}{1+0.5s}.
 \end{equation}
 
-Jelikož se budeme dle zadání snažit pomocí PI regilátoru (viz kapitola \ref{sec:PI}) řídit výšku hladiny $ H_{2} $, vybereme přenos systému z kapitoly \ref{sec:2A}, kde uvažujeme variantu A, tedy měnící se hladiny. Použijeme tudíž přenos systému xxx-číslo-xxx a se zahrnutím přenosu motoru čerpadla (viz \ref{eq:Prenos_motoru}) získáme přenos soustavy ve tvaru:
+Jelikož se budeme dle zadání snažit pomocí PI regilátoru (viz kapitola \ref{sec:PI}) řídit výšku hladiny $ H_{2} $, vybereme přenos systému z kapitoly \ref{sec:2A}, kde uvažujeme variantu A, tedy měnící se hladiny. Použijeme tudíž (nominální) přenos systému (viz \ref{eq:P-A0}) a se zahrnutím přenosu motoru čerpadla (viz \ref{eq:Prenos_motoru}) získáme přenos soustavy ve tvaru:
 \begin{equation}\label{eq:Prenos_soustavy_s_motorem} 
-P_{S}\left ( s \right )=F_{c}\left ( s \right )\cdot P_{neco}\left ( s \right )=\frac{Q_{10}xxxxxxxx}{1+0.5sxxxxxxxxxxxx}.
+P_{S}\left ( s \right )=F_{c}\left ( s \right )\cdot P_{0}\left ( s \right )=\frac{0.002727}{0.5 s^{3} + 1.114 s^{2} + 0.231 s + 0.0062}.
 \end{equation}
 
 \subsection{První úkol - návrh parametrů PI regulatoru}\label{sec:PI} 
@@ -343,10 +343,59 @@ Dále budeme uvažovat, že napětí na kotvě motoru čerpadla je řízeno pomo
 \begin{equation}\label{eq:Prenos_regulatoru} 
 C\left ( s \right )=K\cdot \left ( 1+\frac{1}{T_{i}s} \right ).
 \end{equation}
-Úkolem je navrhnout parametry PI regulátoru tak, aby byly splněny návrhové požadavky pro všechny systémy z modelu neurčitosti pro variantu A, tedy pro měnící se výšky hladin. Tím je myšleno, že požadavky budou platit pro libovolný pracovní bod, který se nechází mezi původním pracovním bodem a pracovním bodem při zvýšením přítoku, tedy pro takový přítok $ Q $, který splňuje podmínku \ref{eq:Q_omezeni}. V další části se tedy budeme zabývat návrhovými požadavky.
+Úkolem je navrhnout parametry PI regulátoru tak, aby byly splněny návrhové požadavky pro všechny systémy z modelu neurčitosti pro variantu A, tedy pro měnící se výšky hladin. Tím je myšleno, že požadavky budou platit pro libovolný pracovní bod, který se nachází mezi původním pracovním bodem a pracovním bodem při zvýšením přítoku, tedy pro takový přítok $ Q $, který splňuje podmínku \ref{eq:Q_omezeni}. 
+
+Pro návrh parametrů PI regulátoru jsme využili Matlabovský nástroj PID Tuner. Výsledkem je určení $ K $ a $ T_{i} $:
+$$ K = 83.25 $$ 
+$$ T_{i}=7.636.$$
+Regulátor tedy bude mít po dosazení do \ref{eq:Prenos_regulatoru} přenos:
+\begin{equation}\label{eq:Vypocteny_prenos_regulatoru} 
+C\left ( s \right )=K\cdot \left ( 1+\frac{1}{T_{i}s} \right ) = \frac{83.25s+10.9023}{s}.
+\end{equation}
+V další části se budeme zabývat návrhovými požadavky.
+
+\newpage
+\subsubsection{Vnitřní stabilita uzavřené smyčky}
+Pro grafické ověření vnitřní stability poslouží Nyquistovo kritérium. K jeho použití potřebujeme znát přenos otevřené smyčky $ L_{0} $:
+\begin{equation}\label{eq:L0} 
+L_{0}=CP_{S}=\frac{xxxx}{xxxxx}.
+\end{equation}
+Nyní zjistěme počet nestabilních pólů $ P $ a nestabilních nul $ Z $ a definujme:
+\begin{equation}\label{eq:N=P-Z} 
+N=P-Z.
+\end{equation}
+Z přenosu zjistíme, že $ P=1 $ a $ Z=0 $, tedy $ N=1 $. Nyquistovo kritérium stability říká, že 
+
+Vykresleme tedy Nyquistovu křivku pro otevřený systém na obrázku.
+
+obrázek nyquist
 
 
 
+
+
+Analyticky ověříme vnitřní stabilitu pomocí známého faktu, že zpětnovazební systém je vnitřně stabilní právě tehdy, jestliže jeho charakteristický polynom nemá žádné nuly v oblasti $ Re\left ( s \right )\geq 0. $
+Charakteristický polynom má tvar:
+\begin{equation}
+1+L_{0}=1+CP_{S}=\frac{xxxx}{xxxxx}.
+\end{equation}
+\subsubsection{Robustnost ve stabilitě}
+Máme požadavek, aby maximální hodnota amplitudy citlivostní funkce byla omezena:
+\begin{equation}\label{eq:Amplituda_citlivostky} 
+M_{S}<2.
+\end{equation}
+Pro určení váhové funkce $ W_{1} $ využijeme podmínku kvality řízení pro nominální přenos $ P_{0} $, kde musí platit:
+\begin{equation}
+\left \| S_{0} \right \|_{\infty }<2,
+\end{equation}
+\begin{equation}
+\left \| W_{1}S_{0} \right \|_{\infty }<1,
+\end{equation}
+a tedy $  W_{1} $ nastavíme na $ 0.5 $.
+Dále musí platit nutná a postačující podmínka pro robustní kvalitu řízení:
+\begin{equation}\label{eq:Robustni_kvalita_podminka} 
+\left \| \left | W_{1}S_{0} \right |+ \left | W_{2}T_{0} \right |\right \|_{\infty }< 1.
+\end{equation}
 
 
 
