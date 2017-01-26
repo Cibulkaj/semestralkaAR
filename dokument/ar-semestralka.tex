@@ -426,7 +426,7 @@ Pro určení váhové funkce $ W_{1} $ využijeme podmínku kvality řízení pr
 \end{equation}
 a tedy $  W_{1} $ nastavíme na $ 0.5 $. Po dosazení zjistíme, že protože:
 \begin{equation}
-\left \| W_{1}S_{0} \right \|_{\infty }=xxx<1,
+\left \| W_{1}S_{0} \right \|_{\infty }=0.6767<1,
 \end{equation}
 je podmínka \ref{eq:Amplituda_citlivostky} splněna.
 Dále musí platit nutná a postačující podmínka pro robustní kvalitu řízení:
@@ -447,13 +447,13 @@ Nutná a postačující podmínka pro robustní kvalitu řízení je tedy splně
 \end{equation}
 Po dosazení získáme:
 \begin{equation} 
-\left \| W_{2}T_{0}\right \|_{\infty }=xxxx<1.
+\left \| W_{2}T_{0}\right \|_{\infty }=0.082<1.
 \end{equation}
 Ověřili jsme si tedy robustnost ve stabilitě pro danou množinu modelů.
 
 \newpage 
 \subsubsection{Podmínka útlumu komplementrání citlivostní funkce}
-Útlum komplementární citlivostní funkce $ T_{0}\left ( j\omega \right ) $ na frekvenci $ \Omega _{a}=10 \left[ rad\cdot s^{-1}   \right ] $, na kterou je omezená dostupná šířka pásma, musí být alespoň $ -10 $ dB. K ověření tohoto požadavku si vykresleme Bodeho frekvenční charakteristiky:
+Útlum komplementární citlivostní funkce $ T\left ( j\omega \right ) $ na frekvenci $ \Omega _{a}=10 \left[ rad\cdot s^{-1}   \right ] $, na kterou je omezená dostupná šířka pásma, musí být alespoň $ -10 $ dB. K ověření tohoto požadavku si vykresleme Bodeho frekvenční charakteristiky:
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/citlivostniFunkce.eps}
@@ -469,13 +469,15 @@ Vyčteme, že útlum na frekvenci $ \Omega _{a} $ je roven pro varianty přenosu
 \subsubsection{Omezení zesílení energie šumu}
 Posledním požadavkem je zajistit, aby energie libovolného šumu měření $ n\left ( t \right ) $ nebyla zesílena více než 1.5 krát. K výpočtu hodnoty tohoto zesílení poslouží $ \left \| H \right \|_{\infty } $ norma komplementární citlivostní funkce:
 \begin{equation}
-\left \| T_{0} \right \|_{\infty } =xxxx<1.5.
+\left \| T_{0} \right \|_{\infty } = 1.0 <1.5.
 \end{equation}
 I tohoto omezení jsme tedy docílili. Platnost si opět ověřme i pro další přenosy množinového modelu.
-
-xxxx
-
-xxxx
+\begin{equation}
+\left \| T_{1} \right \|_{\infty } = 1.0 <1.5.
+\end{equation}
+\begin{equation}
+\left \| T_{2} \right \|_{\infty } = 1.0 <1.5.
+\end{equation}
 
 \newpage 
 \subsection{Druhý úkol}

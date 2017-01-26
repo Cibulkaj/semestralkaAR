@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  26 JAN 2017 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  26 JAN 2017 17:00
 entering extended mode
 **ar-semestralka.tex
 (ar-semestralka.tex
@@ -839,12 +839,12 @@ e 383.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
  [14 <./obrazky/nyquist-eps-converted-to.pdf>] [15] [16]
 Package epstopdf Info: Source file: <obrazky/citlivostniFunkce.eps>
-(epstopdf)                    date: 2017-01-26 16:18:40
-(epstopdf)                    size: 45883 bytes
+(epstopdf)                    date: 2017-01-26 16:48:52
+(epstopdf)                    size: 45344 bytes
 (epstopdf)             Output file: <obrazky/citlivostniFunkce-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2017-01-26 16:20:23
-(epstopdf)                    size: 8331 bytes
+(epstopdf)                    date: 2017-01-26 16:48:57
+(epstopdf)                    size: 8324 bytes
 (epstopdf)             Command: <epstopdf --outfile=obrazky/citlivostniFunkce-e
 ps-converted-to.pdf obrazky/citlivostniFunkce.eps>
 (epstopdf)             \includegraphics on input line 459.
@@ -885,7 +885,7 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ar-semestralka.pdf (18 pages, 3196170 bytes).
+Output written on ar-semestralka.pdf (18 pages, 3196203 bytes).
 PDF statistics:
  426 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
