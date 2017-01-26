@@ -9,9 +9,9 @@ P03 = tf([16.67],[1 0.2083 0.005208]);
 
 Wa=tf([0 0 1.81818181818182 8.88178419700125e-16 -0.0123966942148760],[1 0.477272727272727 0.0705165289256198 0.00325413223140496 4.64876033057851e-05]);
 
-P1 = P01*Qu;
-P2 = P02*Qu;
-P3 = P03*Qu;
+P1 = P01*Qu
+P2 = P02*Qu
+P3 = P03*Qu
 
 Kp = 10;
 Ki = 0.10;
@@ -80,7 +80,7 @@ for i=1:length(p1)
 end
 
 figure
-suptitle('Prenos P2');
+suptitle('Max Prenos P2');
 hold on;
 subplot(2,2,1);
 pzmap(S2);
@@ -118,7 +118,7 @@ for i=1:length(p1)
 end
 
 figure
-suptitle('Prenos P3');
+suptitle('Min Prenos P3');
 hold on;
 subplot(2,2,1);
 pzmap(S3);
@@ -290,7 +290,6 @@ end
 
 stabilni
 
-close all;
 
 
 
