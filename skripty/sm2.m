@@ -205,6 +205,9 @@ ABST1 = abs(squeeze(FRW2T1));
 ABST2 = abs(squeeze(FRW2T2));
 ABST3 = abs(squeeze(FRW2T3));
 
+maxWS = max(ABSS1);
+maxWT = max(ABST1);
+
 soucet1 = ABSS1 + ABST1;
 soucet2 = ABSS2 + ABST2;
 soucet3 = ABSS3 + ABST3;
@@ -236,18 +239,18 @@ end
 figure
 hold on;
 grid on;
-bode(S1);
-bode(S2);
-bode(S3);
+bode(T1);
+bode(T2);
+bode(T3);
 limit = 20*log10(2);
-[mag1,phase] = bode(S1);
-[mag2,phase] = bode(S2);
-[mag3,phase] = bode(S3);
+[mag1,phase] = bode(T1);
+[mag2,phase] = bode(T2);
+[mag3,phase] = bode(T3);
 maximum = zeros(3,1);
 maximum(1) = max(mag1);
 maximum(2) = max(mag2);
 maximum(3) = max(mag3);
-legend('S1','S2','S3');
+legend('T1','T2','T3');
 maximumAll = max(maximum);
 
 %Omezená šíøka pásma
