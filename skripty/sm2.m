@@ -9,9 +9,9 @@ P03 = tf([16.67],[1 0.2083 0.005208]);
 
 Wa=tf([0 0 1.81818181818182 8.88178419700125e-16 -0.0123966942148760],[1 0.477272727272727 0.0705165289256198 0.00325413223140496 4.64876033057851e-05]);
 
-P1 = P01*Qu
-P2 = P02*Qu
-P3 = P03*Qu
+P1 = P01*Qu;
+P2 = P02*Qu;
+P3 = P03*Qu;
 
 Kp = 10;
 Ki = 0.10;
@@ -38,6 +38,10 @@ Si3 = minreal(C/(1+L3));
 So1 = minreal(P1/(1+L1));
 So2 = minreal(P2/(1+L2));
 So3 = minreal(P3/(1+L3));
+
+sys1 = 1+L1;
+sys2 = 1+L2;
+sys3 = 1+L3;
 
 stabilni = true;
 
@@ -211,15 +215,13 @@ grid on;
 
 title('Robustni kvalita rizeni |W1S|+|W2T|');
 plot(log10(Oms),soucet1);
-plot(log10(Oms),soucet2);
-plot(log10(Oms),soucet3);
 plot(xlim, [1 1], 'r--');
 
-legend('pro P1','pro P2','pro P3');
+legend('pro P1','hranice');
 maximum = zeros(3,1);
-maximum(1) = max(soucet1);
-maximum(2) = max(soucet2);
-maximum(3) = max(soucet3);
+maximum(1) = max(soucet1)
+maximum(2) = max(soucet2)
+maximum(3) = max(soucet3)
 maximumAll = max(maximum);
 
 if(maximumAll > 1)
@@ -253,9 +255,9 @@ maximumAll = max(maximum);
 [mag2,phase] = bode(T2,10);
 [mag3,phase] = bode(T3,10);
 
-magdb1 = 20*log10(mag1);
-magdb2 = 20*log10(mag2);
-magdb3 = 20*log10(mag3);
+magdb1 = 20*log10(mag1)
+magdb2 = 20*log10(mag2)
+magdb3 = 20*log10(mag3)
 
 if(magdb1 > -70)
     disp('zesileni na fr');
