@@ -93,7 +93,7 @@ for k = 1:length(Qmod)
     nyquist(Ps{length(Ps)}, O, 'g');
 end
 nyquist(P0a, 'b');
-title('Neaurcitost pro variantu A')
+title('Neurèitost pro variantu A')
 omega = logspace(-2,1e-100,9);
 omega = [0 omega];
 FRP0a = squeeze(freqresp(P0a,omega));
@@ -135,7 +135,7 @@ for k = 1:length(Qmod)
 end
 nyquist(P0b, 'b');
 
-title('Neaurcitost pro variantu B')
+title('Neurèitost pro variantu B')
 FRP0b = squeeze(freqresp(P0b,omega));
 FRWb = squeeze(freqresp(Wb,omega));
 for k = 1:length(omega)
