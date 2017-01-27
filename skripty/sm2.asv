@@ -322,7 +322,7 @@ clear all;
 % title('Citlivostní funkce');
 % legend('S1');
 % w=0.21;
-zesileniCitl = 2.63 %[db]
+zesileniCitl = 2.63; %[db]
 % 
 % 
 % figure
@@ -330,7 +330,7 @@ zesileniCitl = 2.63 %[db]
 % title('Komplementární citlivostní funkce');
 % legend('T1');
 w=0.097;
-zesileniKomp = -0.758 %[db]
+zesileniKomp = -0.758; %[db]
 
 sim('modelPoruchaCtyrka.slx')
 figure;
@@ -340,10 +340,10 @@ plot(simout.Time,simout.Data(:,1));
 plot(simout.Time,simout.Data(:,2));
 
 maximum1 = norm(simout.Data(:,2), Inf)
-plot(xlim, [maximum1 maximum1], 'r--');
+plot(xlim, [maximum maximum], 'r--');
 
-legend('Porucha mìøení','Výstup systému','Maximum výstupu systému pøi chybì');
-title('Pùsobení chyby mìøení systému.');
+legend('Porucha vstupu','Výstup systému','Maximum výstupu systému pøi chybì');
+title('Pùsobení chyby vstupu.');
 
 figure;
 hold on;
@@ -352,14 +352,13 @@ plot(simout.Time,simout1.Data(:,1));
 plot(simout.Time,simout1.Data(:,2));
 
 maximum2 = norm(simout1.Data(:,2), Inf)
-plot(xlim, [maximum2 maximum2], 'r--');
+plot(xlim, [maximum maximum], 'r--');
 
 legend('Porucha výstupu','Výstup systému','Maximum výstupu systému pøi chybì');
-title('Pùsobení chyby výstupu systému.');
+title('Pùsobení chyby výstupu.');
 
 
-maxDb1 = 20*log10(maximum1)
-maxDb2 = 20*log10(maximum2)
+
 
 
 
