@@ -288,7 +288,7 @@ z nichž jednomu bude odpovídat námi zvolení nominální model $ P_{0} $. Zob
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/neurcitostA.eps}
-	%\caption{}
+	\caption{Grafické znázornění neurčitosti pro variantu A.}
 	\label{fig:neurcitost-A}
 	\end{center}
 \end{figure}
@@ -305,7 +305,7 @@ Grafické znázornění provedeme rovněž stejně jako v předchozím bodě za 
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/neurcitostB.eps}
-	%\caption{}
+	\caption{Grafické znázornění neurčitosti pro variantu B.}
 	\label{fig:neurcitost-B}
 	\end{center}
 \end{figure}
@@ -318,7 +318,7 @@ Porovnání neurčitostí pro oba případy provedeme vykreslením příslušný
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/porovnaniNeurcitosti.eps}
-	%\caption{}
+	\caption{Porovnání neurčitostí}
 	\label{fig:porovnani_neurcitosti}
 	\end{center}
 \end{figure}
@@ -381,7 +381,7 @@ Z přenosu zjistíme, že $ P=1 $ a $ Z=0 $, tedy $ N=1 $ pro všechny tři př�
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/nyquist.eps}
-	%\caption{Nyquistova frekvenční charakteristika pro dané přenosy.}
+	\caption{Grafická interpretace Nyquistova kritéria stability.}
 	\label{fig:Nyquistovo_kriterium_stability}
 	\end{center}
 \end{figure}
@@ -439,7 +439,7 @@ W_{2}=W_{m}=\frac{W_{a}}{P_{0}}=\frac{1.818 s^{4} + 0.4144 s^{3} - 0.001124 s^{2
 \end{equation}
 Dosazením do \ref{eq:Robustni_kvalita_podminka} získáme:
 \begin{equation} 
-\left \| \left | W_{1}S_{0} \right |+ \left | W_{2}T_{0} \right |\right \|_{\infty }= 0.7250 <1.
+\left \| \left | W_{1}S_{0} \right |+ \left | W_{2}T_{0} \right |\right \|_{\infty }= 0.7077 <1.
 \end{equation}
 Nutná a postačující podmínka pro robustní kvalitu řízení je tedy splněna. Ještě ověřme podmínku pro robustní stabilitu, která říká:
 \begin{equation} 
@@ -480,15 +480,44 @@ I tohoto omezení jsme tedy docílili. Platnost si opět ověřme i pro další 
 \end{equation}
 
 \newpage 
-\subsection{Druhý úkol}
-V dalším kroku budeme budeme předpokládat, že měření, které provádí senzor hladiny $ H_{2} $, bude zatíženo harmonickým šumem $ n\left ( t \right ) $ o frekvenci 50 Hz. Dále předpokládáme, že i výstup soustavy je zatížen omezenou harmonickou poruchou $ d\left ( t \right ) $ o frekvenci 0.1 Hz. 
-
-
-
-\subsection{Třetí úkol}
+\subsection{Druhý úkol}\label{sec:2_2} 
+V dalším kroku budeme budeme předpokládat, že měření, které provádí senzor hladiny $ H_{2} $, bude zatíženo harmonickým šumem $ n\left ( t \right ) $ o frekvenci 50 Hz. Je známo, že pokud $ n\left ( t \right ) $ je šum měření, je přenos $ n\rightarrow y $ má tvar:
+\begin{equation}
+-T\left ( j\omega  \right ) = \frac{-C\left ( j\omega  \right )P\left (j\omega  \right )}{1+ C\left ( j\omega  \right )P\left ( j\omega  \right )}.
+\end{equation}
+Nyní dosazením dané frekvence $ \omega = 2\pi \cdot 50 $ zjistíme, zda je signál zesílen.
+$$ \left | -T_{0}\left ( j\omega  \right ) \right | = 1.7618\cdot 10^{-9}$$
+$$ \left | -T_{1}\left ( j\omega  \right ) \right | = 1.9380\cdot 10^{-9}$$
+$$ \left | -T_{2}\left ( j\omega  \right ) \right | = 1.6153\cdot 10^{-9}.$$
+Vidíme tedy, že takovéto šumy měření jsou na výstupu výrazně zeslabeny.
+Dále předpokládáme, že i výstup soustavy je zatížen omezenou harmonickou poruchou $ d\left ( t \right ) $ o frekvenci 0.1 Hz. Opět víme, že pokud$ d\left ( t \right ) $ zatěžuje výstup soustavy, je přenos $ d\rightarrow y $ vyjádřen jako:
+\begin{equation}
+S\left ( j\omega  \right ) = \frac{1}{1+ C\left ( j\omega  \right )P\left ( j\omega  \right )}.
+\end{equation}
+Opět dosadíme danou frekvenci šumu, tedy $ \omega = 2\pi \cdot 0.1 $, a zkontrolujme zesílení na výstupu.
+$$ \left | S_{0}\left ( j\omega  \right ) \right | = 1.0671 $$
+$$ \left | S_{1}\left ( j\omega  \right ) \right | = 1.0734 $$
+$$ \left | S_{2}\left ( j\omega  \right ) \right | = 1.0617.$$
+Zde již naopak pozorujeme mírné zesílení
+šumů na výstupu systému.
+\subsection{Třetí úkol - určení maximálního kolísání hladiny}
 Předpokládejme, že je systém v rovnovážném stavu a regulační odchylka $ e\left ( t \right )=0 $. Na vstup řízené soustavy začíná působit porucha $ d_{i} $ s omezenou energií $ \left \| d_{i} \right \|_{2}<1 $. Cílem bude určit maximální kolísání hladiny $ H_{2} $, ke kterému by mohlo od požadovaného stavu dojít.
+Víme, že přenos $ d_{i}\rightarrow y $ bude ve tvaru:
+\begin{equation}\label{eq:P/1+CP} 
+\frac{P\left (j\omega  \right )}{1+ C\left ( j\omega  \right )P\left ( j\omega  \right )}.
+\end{equation}
+Dále využijeme znalosti, že pokud velikost vstupu je měřena pomocí $ \left \| H \right \|_{2} $ normy a výstup $ \left \| H \right \|_{\infty }$ normou, bude zesílení systému dáno $ \left \| H \right \|_{2} $ normou přenosu zmíněného přenosu \ref{eq:P/1+CP}. Platí tedy: 
+\begin{equation}
+\left \| H \right \|_{2}=\sup_{\left \| u \right \|_{2}=1}\frac{\left \| y \right \|_{\infty }}{\left \| u \right \|_{2}}
+\end{equation}
+Spočtením $ \left \| H \right \|_{2} $ normy znovu pro včechny tři případy získáme:
+$$ \left \| \frac{P_{0}\left (j\omega  \right )}{1+ C\left ( j\omega  \right )P\left ( j\omega  \right )} \right\|_{2} = 0.0232 $$
+$$ \left \| \frac{P_{1}\left (j\omega  \right )}{1+ C\left ( j\omega  \right )P_{1}\left ( j\omega  \right )} \right \|_{2} = 0.0229 $$
+$$ \left \| \frac{P_{2}\left (j\omega  \right )}{1+ C\left ( j\omega  \right )P_{2}\left ( j\omega  \right )} \right \|_{2} = 0.0235$$
 
-\subsection{Čtvrtý úkol}
+
+\newpage 
+\subsection{Čtvrtý úkol - určení nejvíce zesílených signálů}
 Nakonec určíme signály $ d\left ( t \right ) $ a $ n\left ( t \right )  $, jejichž $ \left \| H \right \|_{\infty } $ norma je omezená na:
 \begin{equation}
 \left \| d\left ( t \right ) \right \|_{\infty }<1,
@@ -496,7 +525,82 @@ Nakonec určíme signály $ d\left ( t \right ) $ a $ n\left ( t \right )  $, je
 \begin{equation}
 \left \| n\left ( t \right ) \right \|_{\infty }<1.
 \end{equation}
-Tyto signálu jsou zpětnovazební smyčkou nejvíce zesíleny buďto ve smyslu maximální hodnoty signálu, nebo ve smyslu energie signálu.
+Tyto signálu jsou zpětnovazební smyčkou nejvíce zesíleny buďto ve smyslu maximální hodnoty signálu, nebo ve smyslu energie signálu. Ke zjištění, na jakých frekvencích jsou tyto signály zesíleny nejvíce, nám pomůže vykreslení Bodeho frekvenčních charakteristik záporné komplementární citlivostní funkce $ -T\left ( j\omega  \right ) $ a citlivostní funkce $ S\left ( j\omega  \right ) $, určených v kapitole \ref{sec:2_2} pro nominální systém a tyto hodnoty z nich vyčíst.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/komplementarniFunkceCtyrka.eps}
+	\caption{Bodeho frekvenční charakteristika pro $ -T\left ( j\omega  \right ) $.}
+	\label{fig:4_-T}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/citlivostniFunkceCtyrka.eps}
+	\caption{Bodeho frekvenční charakteristika pro $ S\left ( j\omega  \right ) $.}
+	\label{fig:4_S}
+	\end{center}
+\end{figure}
+
+Z každého Bodeho diagramu (obrázky \ref{fig:4_-T} a \ref{fig:4_S}) odečteme jednu frekvenci, tedy v našem případě:
+\begin{equation} \label{eq:Omega_n}
+\Omega _{n}= 0.097\; \textup{rad}\cdot\textup{s}^{-1}
+\end{equation}
+\begin{equation}\label{eq:Omega_d} 
+\Omega _{d}= 0.21\textup{rad}\cdot\textup{s}^{-1}.
+\end{equation}
+
+
+\newpage 
+\subsubsection{Ve smyslu maximální hodnoty signálu}
+Největší zesílení daných externích signálů budeme pozorovat v případě působení periodických signálů o námi určených frekvencích $ \Omega _{n} $ a $ \Omega _{d}$ (viz \ref{eq:Omega_n} a \ref{eq:Omega_d}). Pokud zesílení uvažujeme ve smyslu maximální hodnoty, bude tento periodický signál představovat obdélníkový signál s příslušnou frekvencí. Amplitudu pro jednoduchost nastavíme na hodnotu 1.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/nT2.eps}
+	\caption{Odezva systému při působení obdélníkové poruchy měření $ n\left ( t \right ) $.}
+	\label{fig:4_maxval-n}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/dS2.eps}
+	\caption{Odezva systému při působení obdélníkové poruchy $ d\left ( t \right ) $ na výstup soustavy.}
+	\label{fig:4_maxval-d}
+	\end{center}
+\end{figure}
+
+
+
+\newpage 
+\subsubsection{Ve smyslu energie signálu}
+Pokud zesílení uvažujeme ve smyslu energie, bude působící periodický signál představovat sinusovku s příslušnou frekvencí. Amplitudu stejně jako v předchozím bodě zvolíme jednotkovou.
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/nT.eps}
+	\caption{Odezva systému při působení sinusové poruchy měření $ n\left ( t \right ) $.}
+	\label{fig:4_energie-n}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+	\includegraphics[scale = 1.0]{obrazky/dS.eps}
+	\caption{Odezva systému při působení sinusového poruchy $ d\left ( t \right ) $ na výstup soustavy.}
+	\label{fig:4_energie-d}
+	\end{center}
+\end{figure}
+
+Z obrázků \ref{fig:4_-T} a \ref{fig:4_S} můžeme vyčíst, že maximální zesílení na výstupu za předpokladu působení poruchy měření $ n\left ( t \right ) $ je -0.758 dB a v případě působení poruchy $ d\left ( t \right ) $ na výstup soustavy činí 2.63 dB. Z grafů na obrázcích \ref{fig:4_energie-n} a \ref{fig:4_energie-d} snadno vyčteme hodnotu maximálního zesílení. Pokud převedeme tyto hodnoty do jednotek dB, získáme pro poruchu měření $ n\left ( t \right ) $ zesílení -0.7855 dB a pro poruchu na výstupu soustavy $ d\left ( t \right ) $ zesílení  2.6851 dB. Všimněme si, že tyto hodnoty téměř přesně odpovídají těm, které jsme odečetli z Bodeho frekvenční charakteristiky.
+
+
+
+\newpage 
+\section{Závěr}
+Prví polovina práce se zabývá určením linearizovaného stavového modelu v různých pracovních bodech, lišících se ve velikosti přítoku. Rovněž jsme uvažovali dvě varianty, a to jak měnící se výšky hladin, tak i konstantní hladiny za měnícího se nastavení ventilů. Pro všechny případy jsme dále určili přenosové funkce a dále jsme se zabývali neurčitostí. Jako model neurčitosti jsme volili aditivní perturbaci, přičemž jsme zajistili, aby neurčitost byla minimální, ale přesto pokrývala skutečnou neurčitost systému. Neurčitosti pro obě varianty jsme následně porovnali.
+
+V druhé polovině práce jsme řešili návrh regulátoru. Navíc se nám systém ještě rozrostl o přenos motoru čerpadla, který realizoval přítok. Pro jednoduchost jsme jej realizovali pomocí aproximace systémem prvního řádu. Hlavním úkolem bylo navrhnout parametry PI regulátoru, tak aby byla splněna řada uvedených kritérií. Vedle těch základních, jako je například vnitřní stabilita uzavřené smyčky, jsme, jelikož pracujeme s neurčitostí, řešili rovněž robustnost ve stabilitě. K ověřování některých kritérií jsme používali také grafické metody. V dalším bodě jsme uvažovali zatížení senzoru hladiny a výstupu soustavy harmonickými šumy a zjišťovali jsme, zda jsou tyto signály na výstupu uzavřené smyčky zesíleny, nebo tlumeny. Dále jsme určili maximální hodnotu kolísání měřené hladiny za přítomnosti poruchy působící na vstup soustavy. V posledním bodě jsme zkoumali signály jako poruchy působící na senzor měření a na výstup soustavy a hledali jsme, kde jsou zpětnovazební smyčkou nejvíce zesíleny, a to ve smyslu maximální hodnoty signálu, kde jsme je uvažovali jako obdélníkový periodický signál, a ve smyslu energie signálu, kde jsme je interpretovali jako sinusový signál. Z grafů bylo poté možné určit hodnotu příslušných zesílení.
+
 
 
 \end{document}      
