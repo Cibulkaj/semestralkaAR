@@ -322,23 +322,32 @@ bode(S1);
 title('Citlivostní funkce');
 legend('S1');
 w=0.21;
+zesileniCitl = 2.63; %[db]
+
 
 figure
 bode(T1);
 title('Komplementární citlivostní funkce');
 legend('T1');
-w=0.12;
+w=0.097;
+zesileniKomp = -0.758; %[db]
 
-[num1, den1] = tfdata(T1)
-[num2, den2] = tfdata(S1)
+sim('modelPoruchaCtyrka.slx')
+figure;
+hold on;
+grid on;
+plot(simout.Time,simout.Data(:,1));
+plot(simout.Time,simout.Data(:,2));
+legend('Porucha vstupu','Výstup systému');
+title('Pùsobení chyby vstupu.');
 
-
-% sim('modelPoruchaCtyrka.slx')
-% simout.Time;
-% simout.Data;
-% plot(simout.Time,simout.Data(:,1))
-% 
-
+figure;
+hold on;
+grid on;
+plot(simout.Time,simout1.Data(:,1));
+plot(simout.Time,simout1.Data(:,2));
+legend('Porucha výstupu','Výstup systému');
+title('Pùsobení chyby výstupu.');
 
 
 
