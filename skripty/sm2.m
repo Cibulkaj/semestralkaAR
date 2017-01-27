@@ -193,6 +193,7 @@ FRW1S1 = freqresp(W1S1,Oms);
 FRW1S2 = freqresp(W1S2,Oms);
 FRW1S3 = freqresp(W1S3,Oms);
 
+
 FRW2T1 = freqresp(W2T1,Oms);
 FRW2T2 = freqresp(W2T2,Oms);
 FRW2T3 = freqresp(W2T3,Oms);
@@ -222,9 +223,9 @@ plot(xlim, [1 1], 'r--');
 
 legend('pro P1','hranice');
 maximum = zeros(3,1);
-maximum(1) = max(soucet1)
-maximum(2) = max(soucet2)
-maximum(3) = max(soucet3)
+maximum(1) = max(soucet1);
+maximum(2) = max(soucet2);
+maximum(3) = max(soucet3);
 maximumAll = max(maximum);
 
 if(maximumAll > 1)
@@ -258,9 +259,9 @@ maximumAll = max(maximum);
 [mag2,phase] = bode(T2,10);
 [mag3,phase] = bode(T3,10);
 
-magdb1 = 20*log10(mag1)
-magdb2 = 20*log10(mag2)
-magdb3 = 20*log10(mag3)
+magdb1 = 20*log10(mag1);
+magdb2 = 20*log10(mag2);
+magdb3 = 20*log10(mag3);
 
 if(magdb1 > -70)
     disp('zesileni na fr');
@@ -295,8 +296,48 @@ end
 
 stabilni
 
+close all;
+%Dvojka - harmonicka porucha
+%dosazujeme do S a T
+w1 = 2*3.14*50;
+w2 = 2*3.14*0.1;
+zesileni50Hz1 = abs(freqresp(-T1,w1));
+zesileni50Hz2 =abs(freqresp(-T2,w1));
+zesileni50Hz3 =abs(freqresp(-T3,w1));
+
+zesileni01Hz1 = abs(freqresp(S1,w2));
+zesileni01Hz2 =abs(freqresp(S2,w2));
+zesileni01Hz3 =abs(freqresp(S3,w2));
+%bode(S1,S2,S3)
+
+%Trojka - zesileni externich signalu
+%bode(So1,So2,So3);
+norma1 = norm(So1,2);
+norma2 = norm(So2,2);
+norma3 = norm(So3,2);
+
+%ètyøka - zesileni s omezenim
+figure
+bode(S1);
+title('Citlivostní funkce');
+legend('S1');
+w=0.21;
+
+figure
+bode(T1);
+title('Komplementární citlivostní funkce');
+legend('T1');
+w=0.12;
+
+[num1, den1] = tfdata(T1)
+[num2, den2] = tfdata(S1)
 
 
+% sim('modelPoruchaCtyrka.slx')
+% simout.Time;
+% simout.Data;
+% plot(simout.Time,simout.Data(:,1))
+% 
 
 
 
