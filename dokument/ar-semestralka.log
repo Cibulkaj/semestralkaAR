@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  27 JAN 2017 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.3)  27 JAN 2017 13:57
 entering extended mode
 **ar-semestralka.tex
 (ar-semestralka.tex
@@ -977,10 +977,10 @@ Package pdftex.def Info: obrazky/dS-eps-converted-to.pdf used on input line 588
  [24 <./obrazky/nT-eps-converted-to.pdf>]
 [25 <./obrazky/dS-eps-converted-to.pdf>] [26] (ar-semestralka.aux) ) 
 Here is how much of TeX's memory you used:
- 5943 strings out of 493673
- 82823 string characters out of 3141530
- 169184 words of memory out of 3000000
- 9126 multiletter control sequences out of 15000+200000
+ 5947 strings out of 493673
+ 82871 string characters out of 3141530
+ 169174 words of memory out of 3000000
+ 9130 multiletter control sequences out of 15000+200000
  17455 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,18n,43p,1396b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1003,9 +1003,9 @@ nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb>
-Output written on ar-semestralka.pdf (26 pages, 3402763 bytes).
+Output written on ar-semestralka.pdf (26 pages, 3403031 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
+ 494 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
