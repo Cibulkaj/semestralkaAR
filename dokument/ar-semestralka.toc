@@ -1,21 +1,21 @@
 \select@language {czech}
-\contentsline {section}{\numberline {1}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } - Model neur\IeC {\v c}itosti}{5}
-\contentsline {subsection}{\numberline {1.1}Prvn\IeC {\'\i } \IeC {\'u}kol - v\IeC {\'y}po\IeC {\v c}et nastaven\IeC {\'\i } ventil\IeC {\r u}}{5}
-\contentsline {subsection}{\numberline {1.2}Druh\IeC {\'y} \IeC {\'u}kol - linearizace ve dvou pracovn\IeC {\'\i }ch bodech}{6}
-\contentsline {subsubsection}{\numberline {1.2.1}Konstantn\IeC {\'\i } pr\IeC {\r u}toky - m\IeC {\v e}n\IeC {\'\i } se hladina}{6}
-\contentsline {subsubsection}{\numberline {1.2.2}Konstantn\IeC {\'\i } hladina - m\IeC {\v e}n\IeC {\'\i } se pr\IeC {\r u}toky}{6}
-\contentsline {subsection}{\numberline {1.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } p\IeC {\v r}enosu syst\IeC {\'e}mu}{8}
-\contentsline {subsubsection}{\numberline {1.3.1}Numerick\IeC {\'e} ur\IeC {\v c}en\IeC {\'\i } neur\IeC {\v c}itosti}{10}
-\contentsline {subsection}{\numberline {1.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol - Porovn\IeC {\'a}n\IeC {\'\i } velikost\IeC {\'\i } neur\IeC {\v c}itost\IeC {\'\i }}{13}
-\contentsline {section}{\numberline {2}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } - N\IeC {\'a}vrh regul\IeC {\'a}toru}{14}
-\contentsline {subsection}{\numberline {2.1}Prvn\IeC {\'\i } \IeC {\'u}kol - n\IeC {\'a}vrh parametr\IeC {\r u} PI regulatoru}{14}
-\contentsline {subsubsection}{\numberline {2.1.1}Vnit\IeC {\v r}n\IeC {\'\i } stabilita uzav\IeC {\v r}en\IeC {\'e} smy\IeC {\v c}ky}{15}
-\contentsline {subsubsection}{\numberline {2.1.2}Robustnost ve stabilit\IeC {\v e}}{17}
-\contentsline {subsubsection}{\numberline {2.1.3}Podm\IeC {\'\i }nka \IeC {\'u}tlumu komplementr\IeC {\'a}n\IeC {\'\i } citlivostn\IeC {\'\i } funkce}{18}
-\contentsline {subsubsection}{\numberline {2.1.4}Omezen\IeC {\'\i } zes\IeC {\'\i }len\IeC {\'\i } energie \IeC {\v s}umu}{18}
-\contentsline {subsection}{\numberline {2.2}Druh\IeC {\'y} \IeC {\'u}kol - kontrola zes\IeC {\'\i }len\IeC {\'\i } poruch}{19}
-\contentsline {subsection}{\numberline {2.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } maxim\IeC {\'a}ln\IeC {\'\i }ho kol\IeC {\'\i }s\IeC {\'a}n\IeC {\'\i } hladiny}{19}
-\contentsline {subsection}{\numberline {2.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } nejv\IeC {\'\i }ce zes\IeC {\'\i }len\IeC {\'y}ch sign\IeC {\'a}l\IeC {\r u}}{20}
-\contentsline {subsubsection}{\numberline {2.4.1}Ve smyslu maxim\IeC {\'a}ln\IeC {\'\i } hodnoty sign\IeC {\'a}lu}{22}
-\contentsline {subsubsection}{\numberline {2.4.2}Ve smyslu energie sign\IeC {\'a}lu}{24}
-\contentsline {section}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{26}
+\contentsline {section}{\numberline {1}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } - Model neur\IeC {\v c}itosti}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}Prvn\IeC {\'\i } \IeC {\'u}kol - v\IeC {\'y}po\IeC {\v c}et nastaven\IeC {\'\i } ventil\IeC {\r u}}{5}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Druh\IeC {\'y} \IeC {\'u}kol - linearizace ve dvou pracovn\IeC {\'\i }ch bodech}{6}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Konstantn\IeC {\'\i } pr\IeC {\r u}toky - m\IeC {\v e}n\IeC {\'\i } se hladina}{6}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Konstantn\IeC {\'\i } hladina - m\IeC {\v e}n\IeC {\'\i } se pr\IeC {\r u}toky}{6}{subsubsection.1.2.2}
+\contentsline {subsection}{\numberline {1.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } p\IeC {\v r}enosu syst\IeC {\'e}mu}{8}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Numerick\IeC {\'e} ur\IeC {\v c}en\IeC {\'\i } neur\IeC {\v c}itosti}{10}{subsubsection.1.3.1}
+\contentsline {subsection}{\numberline {1.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol - Porovn\IeC {\'a}n\IeC {\'\i } velikost\IeC {\'\i } neur\IeC {\v c}itost\IeC {\'\i }}{13}{subsection.1.4}
+\contentsline {section}{\numberline {2}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } - N\IeC {\'a}vrh regul\IeC {\'a}toru}{14}{section.2}
+\contentsline {subsection}{\numberline {2.1}Prvn\IeC {\'\i } \IeC {\'u}kol - n\IeC {\'a}vrh parametr\IeC {\r u} PI regulatoru}{14}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Vnit\IeC {\v r}n\IeC {\'\i } stabilita uzav\IeC {\v r}en\IeC {\'e} smy\IeC {\v c}ky}{15}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Robustnost ve stabilit\IeC {\v e}}{17}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Podm\IeC {\'\i }nka \IeC {\'u}tlumu komplementr\IeC {\'a}n\IeC {\'\i } citlivostn\IeC {\'\i } funkce}{18}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Omezen\IeC {\'\i } zes\IeC {\'\i }len\IeC {\'\i } energie \IeC {\v s}umu}{18}{subsubsection.2.1.4}
+\contentsline {subsection}{\numberline {2.2}Druh\IeC {\'y} \IeC {\'u}kol - kontrola zes\IeC {\'\i }len\IeC {\'\i } poruch}{19}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } maxim\IeC {\'a}ln\IeC {\'\i }ho kol\IeC {\'\i }s\IeC {\'a}n\IeC {\'\i } hladiny}{19}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } nejv\IeC {\'\i }ce zes\IeC {\'\i }len\IeC {\'y}ch sign\IeC {\'a}l\IeC {\r u}}{20}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Ve smyslu maxim\IeC {\'a}ln\IeC {\'\i } hodnoty sign\IeC {\'a}lu}{22}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Ve smyslu energie sign\IeC {\'a}lu}{24}{subsubsection.2.4.2}
+\contentsline {section}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{26}{section.3}

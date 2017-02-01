@@ -9,6 +9,7 @@
 \usepackage{mathtools}
 \usepackage{fancyhdr}
 \usepackage{epstopdf}
+\usepackage[hidelinks]{hyperref}
 \usepackage{float}
 \usepackage{gensymb}
 \usepackage[final]{pdfpages}
@@ -429,19 +430,20 @@ a tedy $  W_{1} $ nastavíme na $ 0.5 $. Po dosazení zjistíme, že protože:
 \left \| W_{1}S_{0} \right \|_{\infty }=0.6767<1,
 \end{equation}
 je podmínka \ref{eq:Amplituda_citlivostky} splněna.
-Dále musí platit nutná a postačující podmínka pro robustní kvalitu řízení:
+Pro zajímavost můžeme prozkoumat i robustní kvalitu řízení. Pro tu musí platit nutná a postačující podmínka:
 \begin{equation}\label{eq:Robustni_kvalita_podminka} 
 \left \| \left | W_{1}S_{0} \right |+ \left | W_{2}T_{0} \right |\right \|_{\infty }< 1,
 \end{equation}
 kde $  W_{1} $ specifikuje kvalitu řízení a $  W_{2} $ specifikuje neurčitost systému. Tu určíme využitím přenosu $  W_{a} $ (viz \ref{eq:Wa-A}) takto:
 \begin{equation}\label{eq:Wm=Wa/P0} 
-W_{2}=W_{m}=\frac{W_{a}}{P_{0}}=\frac{1.818 s^{4} + 0.4144 s^{3} - 0.001124 s^{2} - 0.002825 s - 7.686e-05}{18.18 s^{4} + 8.678 s^{3} + 1.282 s^{2} + 0.05917 s + 0.0008452}
+W_{2}=W_{m}=\frac{W_{a}}{P_{0}}=\frac{1.818 s^{4} + 0.4144 s^{3} - 0.001124 s^{2} - 0.002825 s - 7.686e-05}{18.18 s^{4} + 8.678 s^{3} + 1.282 s^{2} + 0.05917 s + 0.0008452},
 \end{equation}
+kde $ W_{m} $ specifikuje neurčitost systému, pokud bychom uvažovali multiplikativní perturbaci. My ale pracujeme s aditivní neurčitostí danou $ W_{a} $, jejíž znalost využijeme pro výpočet $ W_{m} $ pro náš případ (viz \ref{eq:Wm=Wa/P0}). Po tomto ujasnění již můžeme pracovat se známými vztahy.
 Dosazením do \ref{eq:Robustni_kvalita_podminka} získáme:
 \begin{equation} 
 \left \| \left | W_{1}S_{0} \right |+ \left | W_{2}T_{0} \right |\right \|_{\infty }= 0.7077 <1.
 \end{equation}
-Nutná a postačující podmínka pro robustní kvalitu řízení je tedy splněna. Ještě ověřme podmínku pro robustní stabilitu, která říká:
+Nutná a postačující podmínka pro robustní kvalitu řízení je tedy splněna. Nyní ověřme podmínku pro robustní stabilitu, která říká:
 \begin{equation} 
 \left \| W_{2}T_{0}\right \|_{\infty }<1.
 \end{equation}
