@@ -80,7 +80,7 @@ Wa = P-P0a
 
 Ps = cell(0);
 figure; hold on; set(gca, 'box', 'on');
-Qmod = 1:0.03:1.2;
+Qmod = 1:0.02:1.21;
 for k = 1:length(Qmod)
     Q = Qmod(k)*Q10;
     H2 = Q^2/(2*g*S2^2*C2^2);
@@ -99,11 +99,7 @@ omega = [0 omega];
 FRP0a = squeeze(freqresp(P0a,omega));
 FRWa = squeeze(freqresp(Wa,omega));
 for k = 1:length(omega)
-    circle(FRP0a(k), abs(FRWa(k)), 'm');
-%     for i=1:1
-%        plot(real(FRP0a(k)) +  real(FRWa(i)),imag(FRWa(i)) -imag(FRP0a(k)),'r*'); 
-%     end
-    
+    circle(FRP0a(k), abs(FRWa(k)), 'm'); %center, radius
 end
 
 %Pøípad b)
@@ -121,7 +117,7 @@ P0b = P0b(2)
 Wb = P-P0b
 
 figure; hold on; set(gca, 'box', 'on');
-Qmod = 1:0.03:1.2;
+Qmod = 1:0.02:1.23;
 for k = 1:length(Qmod)
     Q = Qmod(k)*Q10;
     Sp_1 = Q/(Cp*sqrt(2*g*(H10-H20)));
