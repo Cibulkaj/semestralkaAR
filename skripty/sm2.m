@@ -23,11 +23,11 @@ L1 = P1*C;
 L2 = P2*C;
 L3 = P3*C;
 
-S1 = minreal(1/(1+L1));
+S1 = minreal(1/(1+L1))
 S2 = minreal(1/(1+L2));
 S3 = minreal(1/(1+L3));
 
-T1 = minreal(L1/(1+L1));
+T1 = minreal(L1/(1+L1))
 T2 = minreal(L2/(1+L2));
 T3 = minreal(L3/(1+L3));
 
@@ -42,6 +42,20 @@ So3 = minreal(P3/(1+L3));
 sys1 = 1+L1;
 sys2 = 1+L2;
 sys3 = 1+L3;
+
+closed = feedback(L1,1)
+
+
+
+
+data = impulse(-closed);
+step(closed)
+norma = norm(data,1);
+
+y = db2mag(norma)
+
+
+
 
 stabilni = true;
 
@@ -169,7 +183,7 @@ title('Nyquistùv graf');
 
 %dodelat primku!!
 nyquist(L1,L2,L3);
-legend('L1','L2','L3');
+legend('L0','L1','L2');
 
 
 %robustnost
@@ -221,7 +235,7 @@ title('Robustni kvalita rizeni |W1S|+|W2T|');
 plot(log10(Oms),soucet1);
 plot(xlim, [1 1], 'r--');
 
-legend('pro P1','hranice');
+legend('pro P0','hranice');
 maximum = zeros(3,1);
 maximum(1) = max(soucet1);
 maximum(2) = max(soucet2);
@@ -251,7 +265,7 @@ maximum = zeros(3,1);
 maximum(1) = max(mag1);
 maximum(2) = max(mag2);
 maximum(3) = max(mag3);
-legend('T1','T2','T3');
+legend('T0','T1','T2');
 maximumAll = max(maximum);
 
 %Omezená šíøka pásma
@@ -320,7 +334,7 @@ norma3 = norm(So3,2);
 figure
 bode(S1);
 title('Citlivostní funkce');
-legend('S1');
+legend('S0');
 w=0.21;
 zesileniCitl = 2.63 %[db]
 
@@ -328,7 +342,7 @@ zesileniCitl = 2.63 %[db]
 figure
 bode(T1);
 title('Komplementární citlivostní funkce');
-legend('T1');
+legend('T0');
 w=0.097;
 zesileniKomp = -0.758 %[db]
 
