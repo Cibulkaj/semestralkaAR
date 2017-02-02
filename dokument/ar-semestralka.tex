@@ -520,7 +520,7 @@ $$ \left \| \frac{P_{2}\left (j\omega  \right )}{1+ C\left ( j\omega  \right )P_
 
 \newpage 
 \subsection{Čtvrtý úkol - určení nejvíce zesílených signálů}
-Nakonec určíme signály $ d\left ( t \right ) $ a $ n\left ( t \right )  $, jejichž $ \left \| H \right \|_{\infty } $ norma je omezená na:
+Nakonec určíme signály $ d\left ( t \right ) $ a $ n\left ( t \right )  $, jejichž $ \left \| h \right \|_{\infty } $ norma je omezená na:
 \begin{equation}
 \left \| d\left ( t \right ) \right \|_{\infty }<1,
 \end{equation}
@@ -555,28 +555,41 @@ Z každého Bodeho diagramu (obrázky \ref{fig:4_-T} a \ref{fig:4_S}) odečteme 
 
 \newpage 
 \subsubsection{Ve smyslu maximální hodnoty signálu}
-Největší zesílení daných externích signálů budeme pozorovat v případě působení periodických signálů o námi určených frekvencích $ \Omega _{n} $ a $ \Omega _{d}$ (viz \ref{eq:Omega_n} a \ref{eq:Omega_d}). Pokud zesílení uvažujeme ve smyslu maximální hodnoty, bude tento periodický signál představovat obdélníkový signál s příslušnou frekvencí. Amplitudu pro jednoduchost nastavíme na hodnotu 1.
-\begin{figure}[htbp]
-	\begin{center}
-	\includegraphics[scale = 1.0]{obrazky/nT2.eps}
-	\caption{Odezva systému při působení obdélníkové poruchy měření $ n\left ( t \right ) $.}
-	\label{fig:4_maxval-n}
-	\end{center}
-\end{figure}
+Největší zesílení daných externích signálů budeme pozorovat v případě působení periodických signálů o námi určených frekvencích $ \Omega _{n} $ a $ \Omega _{d}$ (viz \ref{eq:Omega_n} a \ref{eq:Omega_d}). Pokud zesílení uvažujeme ve smyslu maximální hodnoty, bude tento periodický signál představovat obdélníkový signál s příslušnou frekvencí, tedy:
+\begin{equation}
+u\left ( t-\tau  \right ) \overset{\mathrm{}\triangle}{=}\textup{sgn}\left ( h\left ( \tau  \right ) \right ),
+\end{equation}
+což lze vyčíst ze známých tabulek stejně tak jako tvar určující zesílení $\left \| h \right \|_{1}$, což je jednotková norma impulsní funkce přenosu $ T\left ( j\omega  \right ) $ pro poruchu měření $ n\left ( t \right ) $ a přenosu $ S\left ( j\omega  \right ) $ pro poruchu na výstupu systému $ d\left ( t \right ) $, přičemž platí:
+\begin{equation}
+\left |  y\left (t  \right )\right |\leq \left \| h \right \|_{1}\left \| u \right \|_{\infty }.
+\end{equation}
+Výsledkem je:
+$$ \left \| h_{T_{0}} \right \|_{1} = 2.4253 ,$$
+$$ \left \| h_{S_{0}} \right \|_{1} = 2.4253 .$$
 
-\begin{figure}[htbp]
-	\begin{center}
-	\includegraphics[scale = 1.0]{obrazky/dS2.eps}
-	\caption{Odezva systému při působení obdélníkové poruchy $ d\left ( t \right ) $ na výstup soustavy.}
-	\label{fig:4_maxval-d}
-	\end{center}
-\end{figure}
+
+
+%\begin{figure}[htbp]
+%	\begin{center}
+%	\includegraphics[scale = 1.0]{obrazky/nT2.eps}
+%	\caption{Odezva systému při působení obdélníkové poruchy měření $ n\left ( t \right ) $.}
+%	\label{fig:4_maxval-n}
+%	\end{center}
+%\end{figure}
+
+%\begin{figure}[htbp]
+%	\begin{center}
+%	\includegraphics[scale = 1.0]{obrazky/dS2.eps}
+%	\caption{Odezva systému při působení obdélníkové poruchy $ d\left ( t \right ) $ na výstup soustavy.}
+%	\label{fig:4_maxval-d}
+%	\end{center}
+%\end{figure}
 
 
 
 \newpage 
 \subsubsection{Ve smyslu energie signálu}
-Pokud zesílení uvažujeme ve smyslu energie, bude působící periodický signál představovat sinusovku s příslušnou frekvencí. Amplitudu stejně jako v předchozím bodě zvolíme jednotkovou.
+Pokud zesílení uvažujeme ve smyslu energie, bude působící periodický signál představovat sinusovku s příslušnou frekvencí. Amplitudu zvolíme jednotkovou.
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[scale = 1.0]{obrazky/nT.eps}
@@ -601,8 +614,7 @@ Z obrázků \ref{fig:4_-T} a \ref{fig:4_S} můžeme vyčíst, že maximální ze
 \section{Závěr}
 Prví polovina práce se zabývá určením linearizovaného stavového modelu v různých pracovních bodech, lišících se ve velikosti přítoku. Rovněž jsme uvažovali dvě varianty, a to jak měnící se výšky hladin, tak i konstantní hladiny za měnícího se nastavení ventilů. Pro všechny případy jsme dále určili přenosové funkce a dále jsme se zabývali neurčitostí. Jako model neurčitosti jsme volili aditivní perturbaci, přičemž jsme zajistili, aby neurčitost byla minimální, ale přesto pokrývala skutečnou neurčitost systému. Neurčitosti pro obě varianty jsme následně porovnali.
 
-V druhé polovině práce jsme řešili návrh regulátoru. Navíc se nám systém ještě rozrostl o přenos motoru čerpadla, který realizoval přítok. Pro jednoduchost jsme jej realizovali pomocí aproximace systémem prvního řádu. Hlavním úkolem bylo navrhnout parametry PI regulátoru, tak aby byla splněna řada uvedených kritérií. Vedle těch základních, jako je například vnitřní stabilita uzavřené smyčky, jsme, jelikož pracujeme s neurčitostí, řešili rovněž robustnost ve stabilitě. K ověřování některých kritérií jsme používali také grafické metody. V dalším bodě jsme uvažovali zatížení senzoru hladiny a výstupu soustavy harmonickými šumy a zjišťovali jsme, zda jsou tyto signály na výstupu uzavřené smyčky zesíleny, nebo tlumeny. Dále jsme určili maximální hodnotu kolísání měřené hladiny za přítomnosti poruchy působící na vstup soustavy. V posledním bodě jsme zkoumali signály jako poruchy působící na senzor měření a na výstup soustavy a hledali jsme, kde jsou zpětnovazební smyčkou nejvíce zesíleny, a to ve smyslu maximální hodnoty signálu, kde jsme je uvažovali jako obdélníkový periodický signál, a ve smyslu energie signálu, kde jsme je interpretovali jako sinusový signál. Z grafů bylo poté možné určit hodnotu příslušných zesílení.
-
+V druhé polovině práce jsme řešili návrh regulátoru. Navíc se nám systém ještě rozrostl o přenos motoru čerpadla, který realizoval přítok. Pro jednoduchost jsme jej realizovali pomocí aproximace systémem prvního řádu. Hlavním úkolem bylo navrhnout parametry PI regulátoru, tak aby byla splněna řada uvedených kritérií. Vedle těch základních, jako je například vnitřní stabilita uzavřené smyčky, jsme, jelikož pracujeme s neurčitostí, řešili rovněž robustnost ve stabilitě. K ověřování některých kritérií jsme používali také grafické metody. V dalším bodě jsme uvažovali zatížení senzoru hladiny a výstupu soustavy harmonickými šumy a zjišťovali jsme, zda jsou tyto signály na výstupu uzavřené smyčky zesíleny, nebo tlumeny. Dále jsme určili maximální hodnotu kolísání měřené hladiny za přítomnosti poruchy působící na vstup soustavy. V posledním bodě jsme zkoumali signály jako poruchy působící na senzor měření a na výstup soustavy a hledali jsme, kde jsou zpětnovazební smyčkou nejvíce zesíleny, a to ve smyslu maximální hodnoty signálu, kde jsme je uvažovali jako obdélníkový periodický signál, a ve smyslu energie signálu, kde jsme je interpretovali jako sinusový signál.
 
 
 \end{document}      

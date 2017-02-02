@@ -17,5 +17,5 @@
 \contentsline {subsection}{\numberline {2.3}T\IeC {\v r}et\IeC {\'\i } \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } maxim\IeC {\'a}ln\IeC {\'\i }ho kol\IeC {\'\i }s\IeC {\'a}n\IeC {\'\i } hladiny}{19}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}\IeC {\v C}tvrt\IeC {\'y} \IeC {\'u}kol - ur\IeC {\v c}en\IeC {\'\i } nejv\IeC {\'\i }ce zes\IeC {\'\i }len\IeC {\'y}ch sign\IeC {\'a}l\IeC {\r u}}{20}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Ve smyslu maxim\IeC {\'a}ln\IeC {\'\i } hodnoty sign\IeC {\'a}lu}{22}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Ve smyslu energie sign\IeC {\'a}lu}{24}{subsubsection.2.4.2}
-\contentsline {section}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{26}{section.3}
+\contentsline {subsubsection}{\numberline {2.4.2}Ve smyslu energie sign\IeC {\'a}lu}{23}{subsubsection.2.4.2}
+\contentsline {section}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{25}{section.3}
